@@ -1,0 +1,42 @@
+<NotepadPlus>
+    <Project name="everthing">
+        <File name="everyday\ereryday.sh" />
+        <File name="everyday\search.sh" />
+    </Project>
+    <Project name="scripts">
+        <File name="scripts\rz.sh" />
+        <File name="scripts\posupdate.sh" />
+        <File name="scripts\iptables -F &#x6E05;&#x7A7A;&#x6240;&#x6709;&#x89C4;&#x5219;&#x94FE;" />
+        <File name="scripts\iptables -P INPUT DROP" />
+        <File name="scripts\chkconfig bluetooth  off" />
+        <File name="everyday\daily.sh" />
+    </Project>
+    <Project name="document">
+        <File name="document\Apache_mono.sh" />
+        <File name="document\iptables &#x811A;&#x6B65;&#x53C2;&#x8003;.sh" />
+        <File name="document\mono&#x73AF;&#x5883;&#x642D;&#x5EFA;.sh" />
+        <File name="document\postfix_new.txt" />
+        <File name="document\postgressql &#x5B89;&#x88C5;&#x6587;&#x6863;.sh" />
+        <File name="document\svn_passwdfile.sh" />
+        <File name="document\&#x7CFB;&#x7EDF;&#x642D;&#x5EFA;&#x624B;&#x518C;.sh" />
+        <File name="document\rsync_10.sh" />
+        <File name="document\unison.sh" />
+    </Project>
+    <Project name="salt">
+        <File name="salt\saltsatck file&#x64CD;&#x4F5C;.sh" />
+        <File name="salt\salt&#x57FA;&#x672C;&#x5B89;&#x88C5;.sh" />
+    </Project>
+    <Project name="python ">
+        <File name="python\create_pdf.sh" />
+        <File name="python\debug.py" />
+        <File name="python\down.py" />
+        <File name="python\download_first.py" />
+        <File name="python\image.py" />
+        <File name="python\print_all_files.sh" />
+        <File name="python\Python&#x548C;shell&#x4EA4;&#x4E92;.sh" />
+        <File name="python\url.py" />
+    </Project>
+    <Project name="log">
+        <File name="log\crontab.sh" />
+    </Project>
+</NotepadPlus>

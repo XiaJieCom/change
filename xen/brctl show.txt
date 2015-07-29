@@ -1,0 +1,10 @@
+[root@localhost sysconfig]# brctl show
+bridge name	bridge id		STP enabled	interfaces
+virbr0		8000.525400b007cc	yes		virbr0-nic
+xenbr0		8000.00226497ebd0	no		eth0
+							vif10.0
+							vif11.0
+							vif6.0
+							vif7.0
+							vif8.0
+							vif9.0
