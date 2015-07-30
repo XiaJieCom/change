@@ -1,22 +1,19 @@
-#coding=utf-8
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#import time
 import urllib
-import re
-
-def getHtml(url):
-    page = urllib.urlopen(url)
-    html = page.read()
-    return html
-
-def getImg(html):
-    reg = r'src="(.+?\.png)" pic_ext'
-    imgre = re.compile(reg)
-    imglist = re.findall(imgre,html)
-    x = 0
-    for imgurl in imglist:
-        urllib.urlretrieve(imgurl,'%s.png' % x)
-        x+=1
+p = 1
+base = "http://www.zhihu.com/collection/19668036?page="
+while p < 2:
+	page = base + str(p)
+	print page
+	p = int(p)
+	p = p + 1
+	con = urllib.urlopen('http://www.zhihu.com/collection/19668036?page=1').read()
+	
+	print con
 
 
-html = getHtml("http://www.baidu.com")
 
-print getImg(html)
+
+
