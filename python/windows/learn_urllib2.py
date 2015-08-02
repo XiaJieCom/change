@@ -3,13 +3,13 @@ import urllib2
 import random
 
 
-url = 'http://blog.csdn.net/happydeer'
+url = "http://blog.csdn.net/happydeer"
 
 
-my_headers = {
+my_headers = [
     "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0)",
-    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)
-}
+    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)"
+]
 
 
 def get_content(url,headers):
