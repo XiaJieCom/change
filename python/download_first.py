@@ -116,3 +116,68 @@ while target != -1 and base != -1 and end != -1 and i < 30:
   print 'downloading',name[0]
   time.sleep(5)
   i = i + 1
+  
+  
+#下载所有页面
+import time
+import urllib
+
+page = 1
+url = ['']*350
+i = 0
+link = 1
+while page <= 7:
+  con = urllib.urlopen('http://blog.sina.com.cn/s/articlelist_1191258123_0_'+str(page)+'.html').read()
+  title = con.find(r'<a title=')
+  href = con.find(r'href=',title)
+  html = con.find(r'.html',href)
+  while title != -1 and href != -1 and html != -1 and i < 350:
+    url[i] = con[href +6 :html +5 ]
+    print link,url[i]
+    title = con.find(r'<a title=',html)
+    href = con.find(r'href=',title)
+    html = con.find(r'.html',href)
+    link = link + 1
+    i = i +1
+  else:
+    print 'find end!'
+  page = page + 1
+else:
+    print 'all find end'
+j = 0
+while j < 50:
+    content = urllib.urlopen(url[j]).read()
+    open(r'tmp/'+url[j][-26:],'w+').write(content)
+    j = j + 1
+    time.sleep(5)
+else:
+    print 'download over!'
+	
+#下载所有页面_改编	
+#!/usr/bin/env python
+import time
+import urllib
+
+i = 0
+link = 1
+page = 1
+url = ['']*350
+while page <= 7:
+  con = urllib.urlopen('http://blog.sina.com.cn/s/articlelist_1191258123_0_'+str(page)+'.html').read()
+  title = con.find(r'<a title=')
+  href = con.find(r'href=',title)
+  html = con.find(r'.html',href)
+  while title != -1 and href != -1 and html != -1 and i < 350:
+    url[i] = con[href +6 :html +5 ]
+    print link,url[i]
+    title = con.find(r'<a title=',html)
+    href = con.find(r'href=',title)
+    html = con.find(r'.html',href)
+    content = urllib.urlopen(url[i]).read()
+    open(r'/tmp/zhihu/'+url[i][-26:],'w+').write(content)
+    time.sleep(5)
+    link = link + 1
+    i = i +1
+  page = page + 1
+else:
+    print 'Download Over!'
