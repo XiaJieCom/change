@@ -1,9 +1,11 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
+#import urllib
+# 使用urllib2 伪装浏览器访问
 import urllib2
 import random
 
 
-url = "http://blog.csdn.net/happydeer"
+url = 'http://blog.csdn.net/happydeer'
 
 
 my_headers = [
@@ -19,11 +21,12 @@ def get_content(url,headers):
     print random_header
 
     req = urllib2.Request(url)
-    req.add_header("User-Agent",random_header)
-    req.add_header("Host","blog.csdn.net")
-    req.add_header("Referer","http://blog.csdn.net/")
-    req.add_header("GET",url)
+    req.add_header('User-Agent',random_header)
+    req.add_header('Host','blog.csdn.net')
+    req.add_header('Referer','http://blog.csdn.net/')
+    req.add_header('GET','url')
 
     content = urllib2.urlopen(req).read()
     return content
 print get_content(url,my_headers)
+
