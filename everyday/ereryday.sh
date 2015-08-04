@@ -157,3 +157,5 @@ find / -size +1000000000c
 20、查找并移动
 	把当前目录下面的file（不包括目录)，移动到/opt/shell
 	find  .  -type f  -exec mv {}   /opt/shell   \;
+21、检查udp端口
+	nc -vuz 127.0.0.1 123
