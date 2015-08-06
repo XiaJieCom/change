@@ -159,3 +159,19 @@ find / -size +1000000000c
 	find  .  -type f  -exec mv {}   /opt/shell   \;
 21、检查udp端口
 	nc -vuz 127.0.0.1 123
+22、xm基本命令
+
+　　xm list：所有已知的虚拟机列表
+　　xm create：启动一个非托管的虚拟机
+　　xm help：所有可用的xm命令概述
+　　xm top：提供所有虚拟机的状态概貌
+　　xm console：打开控制台管理虚拟机
+　　xm new：添加虚拟机到Xenbase托管环境
+　　xm start：从Xenbase托管环境启动虚拟机
+　　xm destroy：像关掉电源那样关闭虚拟机
+　　xm shutdown：正确地关掉虚拟机
+　　xm reboot：重新启动虚拟机
+　　xm pause：暂停虚拟机的活动而不释放使用的内存资源
+　　xm unpause：激活使用xm pause命令暂停的虚拟机
+　　xm save：保存虚拟机状态到一个文件
+　　xm restore：重新启动已经保存在文件里的虚拟机

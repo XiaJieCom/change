@@ -35,8 +35,11 @@
         <File name="python\print_all_files.sh" />
         <File name="python\Python&#x548C;shell&#x4EA4;&#x4E92;.sh" />
         <File name="python\url.py" />
+        <File name="python\python&#x5B9E;&#x4F8B;&#x624B;&#x518C;.py" />
     </Project>
     <Project name="log">
-        <File name="log\crontab.sh" />
+        <File name="D:\Document\&#x516C;&#x53F8;\log\crontab.sh" />
+        <File name="D:\Document\&#x516C;&#x53F8;\log\iscsi&#x6302;&#x8F7D;&#x4FE1;&#x606F;.sh" />
+        <File name="D:\Document\&#x516C;&#x53F8;\log\pgsql.sh" />
     </Project>
 </NotepadPlus>

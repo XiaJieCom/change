@@ -1,11 +1,10 @@
 # coding:utf-8
-import time
 import random
 import urllib2
 from bs4 import BeautifulSoup
 
 
-url = 'http://www.qiushibaike.com/history'
+url = 'http://www.qiushibaike.com'
 
 my_headers = [
     'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0',
@@ -16,6 +15,7 @@ my_headers = [
 
 def get_con(url,headers):
   random_header = random.choice(headers)
+  print random_header
   req = urllib2.Request(url)
   req.add_header('User-Agent',random_header)
   req.add_header('Host','www.qiushibaike.com')
@@ -34,6 +34,5 @@ def get_txt(haha):
       con = cont[head +16 :end]
       print str(i),con
       i = i + 1
-      time.sleep(3)
 haha = get_con(url,my_headers)
 print get_txt(haha)
