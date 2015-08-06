@@ -4,7 +4,7 @@ import time
 import urllib
 import urllib2
 import random
-import bs4
+
 url = 'https://www.caimao.com/p2p/targetPage.htm?_=1438691179898'
 
 my_headers = [
@@ -38,7 +38,7 @@ def getCode(info):
     con = info[head + 62:end]
     # while True:
     i = 0
-    while i < 3:
+    while i < 300:
         print i
         if int(con) != 0:
             print 'Come on !!!'

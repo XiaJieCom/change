@@ -17,7 +17,7 @@ def get_content(url):
 
 def get_img(info):
     soup = BeautifulSoup(info)
-    all_img = soup.find_all('img')
+    all_img = soup.find_all('img',class_="BDE_Image")
     print len(all_img)
     for img in all_img:
         print img['src']
@@ -28,7 +28,7 @@ print get_img(info)
 
 '''
 ########################
-
+<img class="BDE_Image" width="560" height="328" pic_ext="bmp" src="http://imgsrc.baidu.com/forum/w%3D580/sign=294db374d462853592e0d229a0ee76f2/e732c895d143ad4b630e8f4683025aafa40f0611.jpg" pic_type="0">
 con = urllib.urlopen(url)
 print con.info()
 print con.getcode()
