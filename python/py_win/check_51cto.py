@@ -35,7 +35,7 @@ def get_txt(haha):
         con = cont[head:end]
         print con
 p = 1
-while p < 11:
+while p < 2:
     haha = get_con(url, my_headers)
     print get_txt(haha)
     print "这是第" + str(p) + "次"
