@@ -36,10 +36,10 @@ def get_txt(haha):
         print con
 p = 1
 while p < 11:
-	haha = get_con(url, my_headers)
-	print get_txt(haha)
-	print "这是第" + str(p) + "次"
-	p = p + 1
+    haha = get_con(url, my_headers)
+    print get_txt(haha)
+    print "这是第" + str(p) + "次"
+    p = p + 1
 
 '''
 <div class="modCon">

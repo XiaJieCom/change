@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#网站已经改版，暂不可用
 import re
 import time
 import urllib
