@@ -3,3 +3,4 @@ import os
 value = 123
 os.environ['var'] = str(value)
 os.system('echo $var')
+
