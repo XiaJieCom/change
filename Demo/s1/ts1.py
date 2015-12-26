@@ -32,8 +32,8 @@ while luckey_nm != choice:
         print("Too small!!!")
 print("Bingo")
 '''
+'''
 luckey_nm = 6
-choice = 0
 i = 0
 while i < 3:
     choice = int(input("Please input you want :"))
@@ -45,5 +45,22 @@ while i < 3:
         print("Bingo!")
         break
     i += 1
+else:
+    print("Too many request...")
+'''
+
+luckey_nm = 6
+
+
+for i in range(3):
+    choice = int(input("Please input you want :"))
+    if choice > luckey_nm:
+        print("Too bigger...")
+    elif choice < luckey_nm:
+        print("Too smaller...")
+    else:
+        print("Bingo!")
+        break
+
 else:
     print("Too many request...")
