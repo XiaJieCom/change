@@ -1,5 +1,5 @@
-zoojack:cow
-haha:123
-xiaomi:123
+tom:cat
 s:1
+q:1
+jack:pig
 a:1

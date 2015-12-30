@@ -80,7 +80,7 @@ while True:
         exit()
 
 '''
-
+'''
 import time
 def input_info():
     global i_name
@@ -92,13 +92,16 @@ def registry():
     print("Your name is %s, and passwd is %s."%(i_name,i_passwd))
     with open('passwd.txt','a+') as f:
         f.write(i_name + ':' + i_passwd + '\n' )
+        '''
+'''
 def login():
+
+    input_info()
+    f = open('passwd.txt').read()
     i = 0
     while i < 3:
-        input_info()
-        f = open('passwd.txt').read()
-        stop = open('stop.txt').read()
-        if f.find(i_name +':'+ i_passwd) !=-1 and stop.find(i_name) == -1:
+        if f.find(i_name +':'+ i_passwd) !=-1:
+            print(f.find(i_name +':'+ i_passwd))
             print("welcome my world!")
             exit()
         else:
@@ -106,20 +109,63 @@ def login():
             i += 1
     else:
         print("Too many times to try again...")
-        print("You must stop, %s!"% i_name)
+
         with open('stop.txt','a+') as f:
             f.write(i_name + '\n' )
             print("You have been added to the black list.\n3 seconds after the withdrawal system!")
-            time.sleep(3)
-            exit()
-
+        #time.sleep(3)
+'''
+'''
 
 while True:
     choice = input("Please input your choice, regstry or login (r/l/q)? ")
     if choice == 'r':
         registry()
     elif choice == 'l':
-        login()
+        input_info()
+        f = open('passwd.txt').read()
+        i = 0
+        while i < 3:
+            if f.find(i_name +':'+ i_passwd) !=-1:
+                print(f.find(i_name +':'+ i_passwd))
+                print("welcome my world!")
+                exit()
+            else:
+                print("Invalid user...")
+                i += 1
+        else:
+            print("Too many times to try again...")
+            break
+    else:
+        print("You can go out!!!")
+        exit()
+'''
+
+while True:
+    choice = input("Please input your choice, regstry or login (r/l/q)? ")
+    if choice == 'r':
+        i_name = input("Please input your name: ").strip()
+        i_passwd = input("Please input your passwd: ").strip()
+        print("Your name is %s, and passwd is %s."%(i_name,i_passwd))
+        with open('passwd.txt','a+') as f:
+            f.write(i_name + ':' + i_passwd + '\n' )
+    elif choice == 'l':
+        i = 0
+        while i < 3:
+            i_name = input("Please input your name: ").strip()
+            i_passwd = input("Please input your passwd: ").strip()
+            with open('passwd.txt') as f:
+                if (i_name +':'+ i_passwd) in f.read():
+                    print("ok !!!")
+                    exit()
+                else:
+                    print("Invalid user ...")
+                    i += 1
+        else:
+            print("Too many times to try again...")
+            with open('stop.txt','a+') as stop:
+                stop.write(i_name + '\n' )
+            exit()
     else:
         print("You can go out!!!")
         exit()
