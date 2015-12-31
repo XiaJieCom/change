@@ -154,13 +154,18 @@ while True:
         while i < 3:
             i_name = input("Please input your name: ").strip()
             i_passwd = input("Please input your passwd: ").strip()
-            with open('passwd.txt') as f:
-                if (i_name +':'+ i_passwd) in f.read():
-                    print("ok !!!")
+            with open('stop.txt') as stop:
+                if i_name in stop.read():
+                    print("Your are in blacklist...")
                     exit()
-                else:
-                    print("Invalid user ...")
-                    i += 1
+                else :
+                    with open('passwd.txt') as f:
+                        if (i_name + ':'+ i_passwd) in f.read():
+                            print("ok !!!")
+                            exit()
+                        else:
+                            print("Invalid user ...")
+                            i += 1
         else:
             print("Too many times to try again...")
             with open('stop.txt','a+') as stop:
