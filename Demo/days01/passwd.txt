@@ -4,3 +4,7 @@ q:1
 jack:pig
 a:1
 w:1
+cc:gg
+r:tom
+tom:cat
+gg:cc
