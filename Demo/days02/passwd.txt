@@ -1,0 +1,9 @@
+tom:cat
+s:1
+s:s
+a:a
+q:q
+pig:pig
+tom:cat:1000000
+tom:cat:10
+tom:cat$10000

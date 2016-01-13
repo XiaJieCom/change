@@ -8,3 +8,4 @@ cc:gg
 r:tom
 tom:cat
 gg:cc
+tom:cat
