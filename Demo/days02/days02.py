@@ -51,7 +51,7 @@ print(res)
 '''
 '''
 加
-    _add_()
+_add_()
     +
 res = num.__add__(10)
 print(res)
@@ -185,12 +185,9 @@ for i in shopping_dict.keys():
     for i in shopping_dict[i].keys():
         print(i)
 '''
-for i in shopping_dict.items():
-    print(type(i))
+#_abs_返回绝对值
 
-
-
-
+a = str('tom')
 
 
 

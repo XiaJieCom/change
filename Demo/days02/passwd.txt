@@ -1,9 +1,11 @@
-tom:cat
-s:1
-s:s
-a:a
-q:q
-pig:pig
-tom:cat:1000000
-tom:cat:10
-tom:cat$10000
+tom:cat 1000000
+s:s 20
+
+:$
+:$
+:$
+c:c$100
+z:z$10
+:$
+z:$
+:$

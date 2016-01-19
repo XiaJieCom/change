@@ -1,5 +1,6 @@
 __author__ = 'jack'
-i_name = 'tom'
-with open('passwd.txt') as f:
-    if (i_name) in f.read():
-        print(f.read())
+import re
+l = 'tom'
+for l in open("passwd.txt"):
+    #print(line),
+    print(l.split())
