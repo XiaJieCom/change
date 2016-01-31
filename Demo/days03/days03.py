@@ -154,10 +154,82 @@ inp_str = ' {"k1":123, "k2": "wupeiqi"} '  # 正确的输入      切记，内�
 #inp_str = " {'k1':123, 'k2': 'wupeiqi'}"   # 错误的输入
 inp_dict = json.loads(inp_str) # 根据字符串书写格式，将字符串自动转换成 字典类型
 '''
-
+'''
 raw = {"backend": "test.oldboy.org","record":{"server": "100.1.7.999","weight": 20,"maxconn": 30}}
 
-d = json.loads()
+d = collections.OrderedDict(raw)
+res = d[choice]
+print(res)
+'''
+'''
+ds = {}
+choice = input('Input your choice:').strip()
+with open('ha.conf','r') as f:
+    for i in f.readlines():
+        if choice in i:
+            print(i)
+
+'''
+'''
+import json
+import collections
+from collections import defaultdict
+raw = '{"backend":"test.oldboy.org","record":{"server": "100.1.7.999","weight": 20,"maxconn": 30}}'
+my_dict = {}
+
+'''
+"""
+def backend(*args):
+    print(type(d))
+
+
+backend(d)
+
+d = json.loads(raw)
+for v in d.values():
+    if type(v) == str:
+        print(v)
+#data = '{"backend":"test.oldboy.org","record":{"server": "100.1.7.999","weight": 20,"maxconn": 30}}'
+#print("server %s %s weight %d maxconn %d" % (data['record']['server'], data['record']['server'], data['record']['weight'], data['record']['maxconn']))
+
+"""
+
+
+import json
+import collections
+from collections import defaultdict
+def conf(*args):
+    #将整个配置文件放入一个列表
+    conf_list = []
+    with open('test.log') as f:
+        for i  in f.readlines():
+            conf_list.append(i)
+    return conf_list
+
+choice =int(input("1、获取HA记录\n2、增加HA记录\n3、删除HA记录\n请输入你的选择: ").strip())
+
+if choice == 1:
+    #print("这里是HA记录")
+    ha = input("请输入要查询的域名")
+    res = conf(ha)
+    for i in res:
+       if 'backend' in i and 'use_backend' not in i:
+            if ha in i:
+                print('\n%d %s'%(res.index(i),i))
+                print(res.index(i)+1,res[res.index(i)+1])
+    pass
+elif choice == 2:
+    #print('增加HA记录')
+    raw = input('请输入你要添加的记录： ')
+    #raw = '{"backend":"test.oldboy.org","record":{"server": "100.1.7.999","weight": 20,"maxconn": 30}}'
+    res = conf(raw)
+    for i in res:
+       if 'backend' in i and 'use_backend' not in i:
+            if raw in i:
+                print(res[res.index(i)])
+                print(res[res.index(i)+1])
+                res.insert(res.index(i)+1,raw)
+                print(res[res.index(i)+1])
 
 
 
@@ -169,5 +241,17 @@ d = json.loads()
 
 
 
+    pass
+else:
+    print('删除HA记录')
+    pass
 
 
+'''
+data = '{"backend":"test.oldboy.org","record":{"server": "100.1.7.999","weight": 20,"maxconn": 30}}'
+raw = 'backend %s' % data
+with open('test.log') as f:
+        for i  in f.readlines():
+            if raw in i:
+                print(i)
+'''
