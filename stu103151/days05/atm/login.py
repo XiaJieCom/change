@@ -33,16 +33,25 @@ if __name__ == '__main__':
                         print('您的额度为:%s'%(handle.amount(i_name)))
                         continue
                     elif int(raw) == 2:
-                        #transfer_accounts = input('请输入对方银行卡号: ').strip()
-                        #transfer_amount = int(input('请输入转入金额:   ').strip())
-                        transfer_accounts = '6224407126081192'
-                        transfer_amount = 100
-                        to_name = handle.account(transfer_accounts)
-                        new_amount_from = handle.amount(i_name) - transfer_amount
-                        new_amount_to = handle.amount(to_name) + transfer_amount
-                        handle.update_amount(i_name,new_amount_from)
-                        handle.update_amount(to_name,new_amount_to)
-                        print('您的额度为:%s'%(handle.amount(i_name)))
+                        while True:
+                            #transfer_accounts = input('请输入对方银行卡号: ').strip()
+                            transfer_amount = int(input('请输入转入金额:   ').strip())
+                            transfer_accounts = '6224407126081192'
+                            #transfer_amount = 100
+                            #根据卡号取出用户名信息
+                            to_name = handle.account(transfer_accounts)
+                            #转账分两部分,原用户减钱,目的用户增加钱
+
+                            new_amount_from = handle.amount(i_name) - transfer_amount
+                            if new_amount_from  > 0:
+                                new_amount_to = handle.amount(to_name) + transfer_amount
+                                handle.update_amount(i_name,new_amount_from)
+                                handle.update_amount(to_name,new_amount_to)
+                                print('您的额度为:%s'%(handle.amount(i_name)))
+                                break
+                            else:
+                                print('余额不足,请重新输入...')
+
                     elif int(raw) == 3:
                         #print('取多少钱')
                         raw = int(input('您要取多少: ').strip())
