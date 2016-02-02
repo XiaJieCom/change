@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4e94b40-b036-4b82-bcce-42506ba2c03e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days04/days04_blog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/backend/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/backend/db/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/backend/logic/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/config/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/config/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/db_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/fontend/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/atm/login.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/css/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/sass/style.sass" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/days05/web/backend/db/sql_api.py" afterPath="$PROJECT_DIR$/Demo/days05/web/backend/db/sql_api.py" />
-    </list>
+    <list default="true" id="c4e94b40-b036-4b82-bcce-42506ba2c03e" name="Default" comment="" />
     <ignored path="github.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -82,8 +60,8 @@
       <file leaf-file-name="login.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.3914027">
-              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6945701">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -1965,8 +1943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.3914027">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6945701">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
