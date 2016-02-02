@@ -1,7 +1,7 @@
 from config import settings
 import os
-base_dir =os.path.abspath(__file__)
-print(base_dir)
+#base_dir =os.path.abspath(__file__)
+#print(base_dir)
 def db_auth(configs):
     if configs.database['user'] == 'root' and configs.database['passwd'] == '123':
         print('DB connection successful!')
