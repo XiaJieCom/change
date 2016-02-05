@@ -64,8 +64,10 @@ def select_name(i_account):
     conn = get_conn()
     cursor = get_cursor(conn)
     result = cursor.execute(sql,i_account)
-    return cursor.fetchone()[0]
-
+    if result == 0:
+        return False
+    else:
+        return cursor.fetchone()[0]
 def update(name,new_amount):
     #sql = "update user set amount = '%s'  where name = '%s'"%(name,new_amount)
     sql = 'update user set amount = %s  where name = %s'

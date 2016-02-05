@@ -27,30 +27,41 @@ if __name__ == '__main__':
             i_amount = random.randint(0,99999999)
             if handle.login(i_name,i_passwd) is True:
                 print('登录成功!')
+
                 while True:
                     raw = input('1  额度查询\n2  转账\n3  取款\n4  存款\n5  退出\n请输入您要办理的业务: ').strip()
                     if int(raw) == 1:
                         print('您的额度为:%s'%(handle.amount(i_name)))
                         continue
                     elif int(raw) == 2:
-                        while True:
-                            #transfer_accounts = input('请输入对方银行卡号: ').strip()
-                            transfer_amount = int(input('请输入转入金额:   ').strip())
-                            transfer_accounts = '6224407126081192'
+                        n = True
+                        while n:
+                            transfer_accounts = input('请输入对方银行卡号: ').strip()
+                            #transfer_amount = int(input('请输入转出金额:   ').strip())
+                            #transfer_accounts = '6224407126081192'
                             #transfer_amount = 100
                             #根据卡号取出用户名信息
                             to_name = handle.account(transfer_accounts)
-                            #转账分两部分,原用户减钱,目的用户增加钱
+                            #如果能得到目的用户的用户名那么就执行下一步
+                            while to_name != False :
+                                transfer_amount = int(input('请输入转出金额:   ').strip())
+                                #转账分两部分,原用户减钱,目的用户增加钱
+                                new_amount_from = handle.amount(i_name) - transfer_amount
+                                if new_amount_from  >= 0:
+                                    new_amount_to = handle.amount(to_name) + transfer_amount
+                                    handle.update_amount(i_name,new_amount_from)
+                                    handle.update_amount(to_name,new_amount_to)
+                                    print('您的额度为:%s'%(handle.amount(i_name)))
+                                    #raise  FoundException()
+                                    n = False
+                                    break
+                                else:
+                                    print('余额不足,请重新输入...')
 
-                            new_amount_from = handle.amount(i_name) - transfer_amount
-                            if new_amount_from  > 0:
-                                new_amount_to = handle.amount(to_name) + transfer_amount
-                                handle.update_amount(i_name,new_amount_from)
-                                handle.update_amount(to_name,new_amount_to)
-                                print('您的额度为:%s'%(handle.amount(i_name)))
-                                break
                             else:
-                                print('余额不足,请重新输入...')
+                                print('卡号错误,请重新输入...')
+
+
 
                     elif int(raw) == 3:
                         #print('取多少钱')
@@ -72,6 +83,8 @@ if __name__ == '__main__':
                         new_amount = handle.amount(i_name) + raw
                         handle.update_amount(i_name,new_amount)
                         print('余额为:%s'%handle.amount(i_name))
+                        exit()
+                    else:
                         exit()
 
 
