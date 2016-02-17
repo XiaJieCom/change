@@ -38,10 +38,12 @@ def update_clock(account,status):
 def del_user(account):
     func = sql_api.del_user(account)
     return func
-def log(date,event):
-    func = sql_api.log(date,event)
+def log(name,date,event):
+    func = sql_api.log(name,date,event)
     return func
-
+def select_log(name):
+    func = sql_api.select_log(name)
+    return func
 
 
 

@@ -133,16 +133,22 @@ def del_user(account):
     conn.commit()
     close(cursor, conn)
     return result
-def log(date,event):
-      sql = 'insert into log(event,date) values(%s,%s)'
-      values = [event,date]
+def log(name,date,event):
+      sql = 'insert into log(name,event,date) values(%s,%s,%s)'
+      values = [name,event,date]
       conn = get_conn()
       cursor = get_cursor(conn)
       result = cursor.execute(sql,values)
       conn.commit()
       close(cursor, conn)
       return result
-
+def select_log(name):
+    sql = 'select * from log WHERE NAME = %s'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,name)
+    for row in cursor.fetchall():
+        print(row[2],row[3])
 
 '''
 

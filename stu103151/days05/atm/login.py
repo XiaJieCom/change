@@ -35,7 +35,7 @@ def reg_user():
 def nomal():
     while True:
         welcome()
-        raw = input('1  额度查询\n2  转账\n3  取款\n4  存款\n5  退出\n请输入您要办理的业务: ').strip()
+        raw = input('1  额度查询\n2  转账\n3  取款\n4  存款\n5  账单查询\n6  退出\n请输入您要办理的业务: ').strip()
         if raw == '1':
             print('您的额度为:%s\n'%(handle.amount(i_name)))
             continue
@@ -60,7 +60,7 @@ def nomal():
                         print('您的当前额度为:%s'%(handle.amount(i_name)))
                         welcome()
                         msg = '%s 转出 %s .' % (i_name,transfer_amount)
-                        log(msg)
+                        log(i_name,msg)
                         n = False
                         break
                     else:
@@ -81,7 +81,7 @@ def nomal():
                     print('您的当前余额为:%s'%handle.amount(i_name))
                     welcome()
                     msg = '%s 取现 %s.'% (i_name,raw)
-                    log(msg)
+                    log(i_name,msg)
                     break
                 else:
                     print("余额不足,请重新输入!")
@@ -97,8 +97,13 @@ def nomal():
             print('\n您的当前余额为:%s \n'%handle.amount(i_name))
             welcome()
             msg = '%s 存款 %s .' % (i_name,raw)
-            log(msg)
+            log(i_name,msg)
             continue
+        elif raw == '5':
+            print('您的账单信息:')
+            time.sleep(1)
+            handle.select_log(i_name)
+
         else:
             print('即将退出...')
             time.sleep(3)
@@ -116,25 +121,25 @@ def admin():
         handle.update_clock(choice,status)
         msg = '%s 已经解除限制.\n'% choice
         print(msg)
-        log(msg)
+        log(i_name,msg)
     elif raw == '3':
         choice = input('\n请输入您要锁定的卡号: ').strip()
         status = 1
         handle.update_clock(choice,status)
         msg = '%s 已经锁定该账号.\n'% choice
         print(msg)
-        log(msg)
+        log(i_name,msg)
     elif raw == '4':
         choice = input('请输入您要注销的账号: ').strip()
         handle.del_user(choice)
         msg = '%s 已经被注销!' % choice
         print(msg)
-        log(msg)
+        log(i_name,msg)
     else:
         exit()
-def log(event):
+def log(name,event):
     date = create_date()
-    handle.log(date,event)
+    handle.log(name,date,event)
 
 if __name__ == '__main__':
     raw = input('欢迎使用Automatic Teller Machine系统, 请选择开卡或者登录 (r or l) : ').strip()
@@ -153,11 +158,12 @@ if __name__ == '__main__':
                 time.sleep(0)
                 msg = '%s 该账户已经被锁定,请联系客服工作人员!' % i_name
                 print(msg)
+                log(i_name,msg)
                 exit()
             elif handle.login(i_name,i_passwd) is True:
                 msg = '%s 登录成功!' % i_name
                 print(msg)
-                log(msg)
+                #log(i_name,msg)
                 #判断用户角色,根据角色显示不同菜单
                 while True:
                     if handle.role(i_name) is True:
@@ -167,7 +173,7 @@ if __name__ == '__main__':
             else:
                 msg = '%s 账号或者密码错误,请重新输入' % i_name
                 print(msg)
-                log(msg)
+                log(i_name,msg)
                 i +=1
 
         else:
@@ -175,6 +181,6 @@ if __name__ == '__main__':
             handle.clock_account(i_name)
             msg = '\n %s 输入错误次数过多,账号被锁定,请联系客服人员...'% i_name
             print(msg)
-            log(msg)
+            log(i_name,msg)
     else:
         exit()
