@@ -44,12 +44,31 @@ def auth(name,passwd):
     close(cursor, conn)
     if result != 0:
         return True
-def insert(name,passwd,account,mail):
-      sql = 'insert into user(name,passwd,account,mail) values(%s,%s,%s,%s)'
-      values = [name,passwd,account,mail]
+def active(name):
+    sql = 'select status from user where name = %s and status = 1'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,name)
+    if result == 0:
+        return True
+    else:
+        return False
+def role(name):
+    sql = 'select role from user where name = %s and role = "admin"'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,name)
+    if result == 0:
+        return True
+    else:
+        return False
+
+def insert(name,passwd,account,amount,mail,status,date):
+      sql = 'insert into user(name,passwd,account,amount,mail,status,create_time) values(%s,%s,%s,%s,%s,%s,%s)'
+      values = [name,passwd,account,amount,mail,status,date]
       conn = get_conn()
       cursor = get_cursor(conn)
-      result = cursor.execute(sql, values)
+      result = cursor.execute(sql,values)
       conn.commit()
       close(cursor, conn)
       return result
@@ -70,6 +89,65 @@ def select_name(i_account):
         return cursor.fetchone()[0]
 def update(name,new_amount):
     #sql = "update user set amount = '%s'  where name = '%s'"%(name,new_amount)
+    sql = 'update USER set amount = %s  where name = %s'
+    data = new_amount,name
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,data)
+    conn.commit()
+    close(cursor, conn)
+    return result
+def clock_account(name):
+    sql = 'update USER set status = 1  where name = %s'
+    data = name
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,data)
+    conn.commit()
+    close(cursor, conn)
+    return result
+def select_all():
+    sql = 'select name,account,status from USER'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql)
+    for row in cursor.fetchall():
+        print(row[0],row[1],row[2])
+        #for r in row:
+        #    print(r)
+    close(cursor,conn)
+def update_clock(account,status):
+    sql = 'update USER set status = %s  where account = %s'
+    data = status,account
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,data)
+    conn.commit()
+    close(cursor, conn)
+    return result
+def del_user(account):
+    sql = 'delete from User where account = %s'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,account)
+    conn.commit()
+    close(cursor, conn)
+    return result
+def log(date,event):
+      sql = 'insert into log(event,date) values(%s,%s)'
+      values = [event,date]
+      conn = get_conn()
+      cursor = get_cursor(conn)
+      result = cursor.execute(sql,values)
+      conn.commit()
+      close(cursor, conn)
+      return result
+
+
+'''
+
+def update(name,new_amount):
+    #sql = "update user set amount = '%s'  where name = '%s'"%(name,new_amount)
     sql = 'update user set amount = %s  where name = %s'
     data = new_amount,name
     conn = get_conn()
@@ -78,7 +156,7 @@ def update(name,new_amount):
     conn.commit()
     close(cursor, conn)
     return result
-
+'''
 
 
 

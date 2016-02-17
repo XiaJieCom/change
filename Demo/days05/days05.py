@@ -75,7 +75,7 @@ print(data)
 '''
 '''
 import time
-import datetime
+
 print('处理器时间: %s'%time.clock())
 print('处理器时间: %s'%time.process_time())
 print('时间戳: %s'%time.time())
