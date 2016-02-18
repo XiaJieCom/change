@@ -1,4 +1,8 @@
 from backend.db import sql_api
+import os,sys
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0,parentdir)
+from atm.backend.db import sql_api as atm
 
 
 def reg(name,passwd,account,amount,mail,status,date):
@@ -8,8 +12,11 @@ def active(name):
     func = sql_api.active(name)
     return func
 def login(name,passwd):
-    login_data = sql_api.auth(name,passwd)
-    return login_data
+    func = sql_api.auth(name,passwd)
+    return func
+def s_login(account,passwd):
+    func = atm.s_auth(account,passwd)
+    return func
 def role(name):
     func = sql_api.role(name)
     return func
@@ -17,14 +24,20 @@ def clock(name):
     clock_data = sql_api.update(name)
 
 def amount(name):
-    amount_data = sql_api.select(name)
-    return amount_data
+    func = sql_api.select(name)
+    return func
+def q_amount(account):
+    func = atm.select_amount(account)
+    return func
 def account(i_account):
-    q_name = sql_api.select_name(i_account)
-    return q_name
+    func = sql_api.select_name(i_account)
+    return func
 
 def update_amount(name,new_amount):
     func = sql_api.update(name,new_amount)
+    return func
+def up_amount(account,amount):
+    func = atm.up_amount(account,amount)
     return func
 def clock_account(name):
     func = sql_api.clock_account(name)
@@ -45,7 +58,8 @@ def select_log(name):
     func = sql_api.select_log(name)
     return func
 
-
+def ts():
+    print('ss')
 
 
 '''

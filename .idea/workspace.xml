@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e94b40-b036-4b82-bcce-42506ba2c03e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/backend/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/backend/db/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/backend/logic/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/backend/logic/handle.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/config/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/config/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days05/shop/login.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stu103151/days05/atm/fontend/__init__.py" afterPath="$PROJECT_DIR$/stu103151/days05/shop/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/github.iml" afterPath="$PROJECT_DIR$/.idea/github.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py" afterPath="$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py" afterPath="$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days05/atm/login.py" afterPath="$PROJECT_DIR$/stu103151/days05/atm/login.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py" afterPath="$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days05/shop/backend/logic/handle.py" afterPath="$PROJECT_DIR$/stu103151/days05/shop/backend/logic/handle.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days05/shop/login.py" afterPath="$PROJECT_DIR$/stu103151/days05/shop/login.py" />
     </list>
     <ignored path="github.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +32,7 @@
     <SUITE FILE_PATH="coverage/github$s1.coverage" NAME="s1 Coverage Results" MODIFIED="1451399835110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/day1" />
     <SUITE FILE_PATH="coverage/github$rt03.coverage" NAME="rt03 Coverage Results" MODIFIED="1453432380728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days03" />
     <SUITE FILE_PATH="coverage/github$learn.coverage" NAME="learn Coverage Results" MODIFIED="1453734116377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days04" />
-    <SUITE FILE_PATH="coverage/github$login__1_.coverage" NAME="login (1) Coverage Results" MODIFIED="1455722783756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stu103151/days05/shop" />
+    <SUITE FILE_PATH="coverage/github$login__1_.coverage" NAME="login (1) Coverage Results" MODIFIED="1455781795630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stu103151/days05/shop" />
     <SUITE FILE_PATH="coverage/github$days03.coverage" NAME="days03 Coverage Results" MODIFIED="1453401205006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days03" />
     <SUITE FILE_PATH="coverage/github$test03.coverage" NAME="test03 Coverage Results" MODIFIED="1453396275489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days03" />
     <SUITE FILE_PATH="coverage/github$ts1.coverage" NAME="ts1 Coverage Results" MODIFIED="1454035657704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days04" />
@@ -45,7 +45,7 @@
     <SUITE FILE_PATH="coverage/github$bc.coverage" NAME="bc Coverage Results" MODIFIED="1454035031507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days04" />
     <SUITE FILE_PATH="coverage/github$county.coverage" NAME="county Coverage Results" MODIFIED="1452595461470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days01" />
     <SUITE FILE_PATH="coverage/github$sql_api.coverage" NAME="sql_api Coverage Results" MODIFIED="1454145169418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days05/web/backend/db" />
-    <SUITE FILE_PATH="coverage/github$login.coverage" NAME="login Coverage Results" MODIFIED="1455704057892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stu103151/days05/atm" />
+    <SUITE FILE_PATH="coverage/github$login.coverage" NAME="login Coverage Results" MODIFIED="1455774838746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stu103151/days05/atm" />
     <SUITE FILE_PATH="coverage/github$db_test.coverage" NAME="db_test Coverage Results" MODIFIED="1454322468754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stu103151/days05/atm" />
     <SUITE FILE_PATH="coverage/github$ip.coverage" NAME="ip Coverage Results" MODIFIED="1452565759106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/check" />
     <SUITE FILE_PATH="coverage/github$shop.coverage" NAME="shop Coverage Results" MODIFIED="1452696284350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Demo/days02" />
@@ -68,20 +68,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="152" column="63" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.59002167">
+              <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
               <folding>
-                <element signature="e#82#128#0" expanded="false" />
-                <element signature="e#152#396#0" expanded="false" />
-                <element signature="e#420#526#0" expanded="false" />
-                <element signature="e#551#601#0" expanded="false" />
-                <element signature="e#622#975#0" expanded="false" />
-                <element signature="e#993#3966#0" expanded="false" />
-                <element signature="e#3984#4851#0" expanded="false" />
+                <element signature="e#235#281#0" expanded="false" />
+                <element signature="e#305#549#0" expanded="false" />
+                <element signature="e#573#679#0" expanded="false" />
+                <element signature="e#704#754#0" expanded="false" />
+                <element signature="e#775#1156#0" expanded="false" />
+                <element signature="e#1183#1235#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="164" column="41" selection-start-line="163" selection-start-column="14" selection-end-line="164" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/stu103151/days02/shopping/shop.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <caret line="70" column="22" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -100,22 +109,8 @@
         <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/backend/logic/handle.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sql_api.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7905918">
-              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-              <folding>
-                <marker date="1455721915000" expanded="true" signature="797:816" placeholder="select * fro... log" />
-                <marker date="1455721915000" expanded="true" signature="1170:1204" placeholder="select price... goods" />
-                <marker date="1455721915000" expanded="true" signature="1170:1205" placeholder="select price... goods" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -124,30 +119,62 @@
         <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
               <folding>
-                <marker date="1455704019000" expanded="true" signature="780:845" placeholder="SELECT NAME,... USER" />
-                <marker date="1455704019000" expanded="true" signature="1051:1087" placeholder="select statu... user" />
-                <marker date="1455704019000" expanded="true" signature="1051:1088" placeholder="select statu... user" />
-                <marker date="1455704019000" expanded="true" signature="1051:1105" placeholder="select statu... user" />
-                <marker date="1455704019000" expanded="true" signature="1295:1337" placeholder="select statu... user" />
-                <marker date="1455704019000" expanded="true" signature="1295:1343" placeholder="select role user" />
-                <marker date="1455704019000" expanded="true" signature="1295:1350" placeholder="select from user" />
-                <marker date="1455704019000" expanded="true" signature="1295:1351" placeholder="select role user" />
-                <marker date="1455704019000" expanded="true" signature="1585:1682" placeholder="insert into user... " />
-                <marker date="1455704019000" expanded="true" signature="1938:1988" placeholder="select name,... USER" />
-                <marker date="1455704019000" expanded="true" signature="2153:2199" placeholder="select name,... USER" />
-                <marker date="1455704019000" expanded="true" signature="2505:2547" placeholder="update user " />
-                <marker date="1455704019000" expanded="true" signature="2764:2805" placeholder="update USER " />
-                <marker date="1455704019000" expanded="true" signature="3004:3040" placeholder="select name,... USER" />
-                <marker date="1455704019000" expanded="true" signature="3310:3355" placeholder="update USER " />
-                <marker date="1455704019000" expanded="true" signature="3569:3602" placeholder="delete from " />
-                <marker date="1455704019000" expanded="true" signature="3586:3602" placeholder="update USER " />
-                <marker date="1455704019000" expanded="true" signature="3798:3847" placeholder="insert into log... " />
-                <marker date="1455704019000" expanded="true" signature="4079:4093" placeholder="select name,... USER" />
-                <marker date="1455704019000" expanded="true" signature="4079:4109" placeholder="select * fro... USER" />
-                <marker date="1455704019000" expanded="true" signature="4079:4110" placeholder="select * fro... USER" />
-                <marker date="1455704019000" expanded="true" signature="4393:4435" placeholder="update user " />
+                <marker date="1455777412000" expanded="true" signature="777:842" placeholder="SELECT NAME,... USER" />
+                <marker date="1455777412000" expanded="true" signature="1081:1138" placeholder="SELECT accou... USER" />
+                <marker date="1455777412000" expanded="true" signature="1081:1140" placeholder="SELECT NAME,... USER" />
+                <marker date="1455777412000" expanded="true" signature="1343:1379" placeholder="select statu... user" />
+                <marker date="1455777412000" expanded="true" signature="1343:1380" placeholder="select statu... user" />
+                <marker date="1455777412000" expanded="true" signature="1343:1397" placeholder="select statu... user" />
+                <marker date="1455777412000" expanded="true" signature="1587:1629" placeholder="select statu... user" />
+                <marker date="1455777412000" expanded="true" signature="1587:1635" placeholder="select role user" />
+                <marker date="1455777412000" expanded="true" signature="1587:1642" placeholder="select from user" />
+                <marker date="1455777412000" expanded="true" signature="1587:1643" placeholder="select role user" />
+                <marker date="1455777412000" expanded="true" signature="1877:1974" placeholder="insert into user... " />
+                <marker date="1455777412000" expanded="true" signature="2230:2280" placeholder="select name,... USER" />
+                <marker date="1455777412000" expanded="true" signature="2445:2485" placeholder="select name,... USER" />
+                <marker date="1455777412000" expanded="true" signature="2650:2696" placeholder="select name,... USER" />
+                <marker date="1455777412000" expanded="true" signature="3002:3044" placeholder="update user " />
+                <marker date="1455777412000" expanded="true" signature="3267:3312" placeholder="update USER " />
+                <marker date="1455777412000" expanded="true" signature="3528:3569" placeholder="update USER " />
+                <marker date="1455777412000" expanded="true" signature="3768:3804" placeholder="select name,... USER" />
+                <marker date="1455777412000" expanded="true" signature="4074:4119" placeholder="update USER " />
+                <marker date="1455777412000" expanded="true" signature="4333:4366" placeholder="delete from " />
+                <marker date="1455777412000" expanded="true" signature="4350:4366" placeholder="update USER " />
+                <marker date="1455777412000" expanded="true" signature="4562:4611" placeholder="insert into log... " />
+                <marker date="1455777412000" expanded="true" signature="4843:4857" placeholder="select name,... USER" />
+                <marker date="1455777412000" expanded="true" signature="4843:4873" placeholder="select * fro... USER" />
+                <marker date="1455777412000" expanded="true" signature="4843:4874" placeholder="select * fro... USER" />
+                <marker date="1455777412000" expanded="true" signature="5157:5199" placeholder="update user " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="handle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sql_api.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+              <folding>
+                <marker date="1455766168000" expanded="true" signature="797:816" placeholder="select * fro... log" />
+                <marker date="1455766168000" expanded="true" signature="1170:1204" placeholder="select price... goods" />
+                <marker date="1455766168000" expanded="true" signature="1170:1205" placeholder="select price... goods" />
+                <marker date="1455766168000" expanded="true" signature="1409:1443" placeholder="select name goods" />
+                <marker date="1455766168000" expanded="true" signature="1678:1765" placeholder="insert into user... " />
               </folding>
             </state>
           </provider>
@@ -171,6 +198,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Demo/days04/bc.py" root0="FORCE_HIGHLIGHTING" />
@@ -201,12 +231,13 @@
         <option value="$PROJECT_DIR$/happy/travel.html" />
         <option value="$PROJECT_DIR$/happy/fool.html" />
         <option value="$PROJECT_DIR$/Demo/days05/days05.py" />
+        <option value="$PROJECT_DIR$/stu103151/days05/shop/config/settings.py" />
+        <option value="$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py" />
+        <option value="$PROJECT_DIR$/stu103151/days05/shop/backend/logic/handle.py" />
+        <option value="$PROJECT_DIR$/stu103151/days05/atm/__init__.py" />
+        <option value="$PROJECT_DIR$/stu103151/days05/atm/login.py" />
         <option value="$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py" />
         <option value="$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py" />
-        <option value="$PROJECT_DIR$/stu103151/days05/atm/login.py" />
-        <option value="$PROJECT_DIR$/stu103151/days05/shop/config/settings.py" />
-        <option value="$PROJECT_DIR$/stu103151/days05/shop/backend/logic/handle.py" />
-        <option value="$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py" />
         <option value="$PROJECT_DIR$/stu103151/days05/shop/login.py" />
       </list>
     </option>
@@ -249,7 +280,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -286,10 +317,6 @@
               <option name="myItemId" value="github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -320,32 +347,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stu103151" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="days05" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,36 +373,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stu103151" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="days05" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -468,102 +439,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stu103151" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="days05" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stu103151" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="days05" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stu103151" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stu103151" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="days02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stu103151" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="days02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shopping" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,7 +451,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../python/binges" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -952,51 +827,51 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1230" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1230" height="777" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22474748" sideWeight="0.62857145" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751092" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3591241" sideWeight="0.50329876" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.286754" sideWeight="0.7751423" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28613138" sideWeight="0.7751423" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5518248" sideWeight="0.78197676" order="2" side_tool="false" content_ui="tabs" x="322" y="202" width="906" height="419" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24896608" sideWeight="0.4992722" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16329966" sideWeight="0.37142858" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31532848" sideWeight="0.4967012" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39270073" sideWeight="0.78197676" order="2" side_tool="false" content_ui="tabs" x="322" y="202" width="906" height="419" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31586608" sideWeight="0.4967012" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32798833" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751092" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3600583" sideWeight="0.50329876" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3591241" sideWeight="0.50329876" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.7751423" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489083" sideWeight="0.78197676" order="2" side_tool="false" content_ui="tabs" x="322" y="202" width="906" height="419" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28613138" sideWeight="0.7751423" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2729927" sideWeight="0.78197676" order="2" side_tool="false" content_ui="tabs" x="322" y="202" width="906" height="419" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16526139" sideWeight="0.62857145" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22474748" sideWeight="0.62857145" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24896608" sideWeight="0.4992722" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16329966" sideWeight="0.37142858" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38864627" sideWeight="0.4967012" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31586608" sideWeight="0.4967012" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1527,62 +1402,32 @@
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
           <line>89</line>
-          <option name="timeStamp" value="428" />
+          <option name="timeStamp" value="497" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="498" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
           <line>91</line>
-          <option name="timeStamp" value="429" />
+          <option name="timeStamp" value="499" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
           <line>92</line>
-          <option name="timeStamp" value="430" />
+          <option name="timeStamp" value="500" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
           <line>93</line>
-          <option name="timeStamp" value="431" />
+          <option name="timeStamp" value="501" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
           <line>94</line>
-          <option name="timeStamp" value="432" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
-          <line>95</line>
-          <option name="timeStamp" value="433" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
-          <line>97</line>
-          <option name="timeStamp" value="434" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
-          <line>96</line>
-          <option name="timeStamp" value="435" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="436" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="453" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="454" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="455" />
+          <option name="timeStamp" value="502" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1595,39 +1440,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="492" />
+      <option name="time" value="503" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Demo/days02/days02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="139" column="16" selection-start-line="139" selection-start-column="12" selection-end-line="139" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6561605">
-          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days03/blog">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="44" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/days03/rt03.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2219101">
@@ -1897,13 +1714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/config/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08364312">
@@ -1918,65 +1728,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py">
+    <entry file="file://$PROJECT_DIR$/../../python/binges/day2/流程图.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../python/binges/day2/start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58178437">
-          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+        <state vertical-scroll-proportion="-0.31007752">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days02/shopping/shop.py">
+    <entry file="file://$PROJECT_DIR$/work">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+          <folding>
+            <marker date="1455766168000" expanded="true" signature="797:816" placeholder="select * fro... log" />
+            <marker date="1455766168000" expanded="true" signature="1170:1204" placeholder="select price... goods" />
+            <marker date="1455766168000" expanded="true" signature="1170:1205" placeholder="select price... goods" />
+            <marker date="1455766168000" expanded="true" signature="1409:1443" placeholder="select name goods" />
+            <marker date="1455766168000" expanded="true" signature="1678:1765" placeholder="insert into user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="164" column="41" selection-start-line="163" selection-start-column="14" selection-end-line="164" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/backend/logic/handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days05/atm/backend/db/sql_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="27" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
           <folding>
-            <marker date="1455704019000" expanded="true" signature="780:845" placeholder="SELECT NAME,... USER" />
-            <marker date="1455704019000" expanded="true" signature="1051:1087" placeholder="select statu... user" />
-            <marker date="1455704019000" expanded="true" signature="1051:1088" placeholder="select statu... user" />
-            <marker date="1455704019000" expanded="true" signature="1051:1105" placeholder="select statu... user" />
-            <marker date="1455704019000" expanded="true" signature="1295:1337" placeholder="select statu... user" />
-            <marker date="1455704019000" expanded="true" signature="1295:1343" placeholder="select role user" />
-            <marker date="1455704019000" expanded="true" signature="1295:1350" placeholder="select from user" />
-            <marker date="1455704019000" expanded="true" signature="1295:1351" placeholder="select role user" />
-            <marker date="1455704019000" expanded="true" signature="1585:1682" placeholder="insert into user... " />
-            <marker date="1455704019000" expanded="true" signature="1938:1988" placeholder="select name,... USER" />
-            <marker date="1455704019000" expanded="true" signature="2153:2199" placeholder="select name,... USER" />
-            <marker date="1455704019000" expanded="true" signature="2505:2547" placeholder="update user " />
-            <marker date="1455704019000" expanded="true" signature="2764:2805" placeholder="update USER " />
-            <marker date="1455704019000" expanded="true" signature="3004:3040" placeholder="select name,... USER" />
-            <marker date="1455704019000" expanded="true" signature="3310:3355" placeholder="update USER " />
-            <marker date="1455704019000" expanded="true" signature="3569:3602" placeholder="delete from " />
-            <marker date="1455704019000" expanded="true" signature="3586:3602" placeholder="update USER " />
-            <marker date="1455704019000" expanded="true" signature="3798:3847" placeholder="insert into log... " />
-            <marker date="1455704019000" expanded="true" signature="4079:4093" placeholder="select name,... USER" />
-            <marker date="1455704019000" expanded="true" signature="4079:4109" placeholder="select * fro... USER" />
-            <marker date="1455704019000" expanded="true" signature="4079:4110" placeholder="select * fro... USER" />
-            <marker date="1455704019000" expanded="true" signature="4393:4435" placeholder="update user " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="63" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="63" />
-          <folding>
-            <element signature="e#82#128#0" expanded="false" />
-            <element signature="e#152#396#0" expanded="false" />
-            <element signature="e#420#526#0" expanded="false" />
-            <element signature="e#551#601#0" expanded="false" />
-            <element signature="e#622#975#0" expanded="false" />
-            <element signature="e#993#3966#0" expanded="false" />
-            <element signature="e#3984#4851#0" expanded="false" />
+            <marker date="1455777412000" expanded="true" signature="777:842" placeholder="SELECT NAME,... USER" />
+            <marker date="1455777412000" expanded="true" signature="1081:1138" placeholder="SELECT accou... USER" />
+            <marker date="1455777412000" expanded="true" signature="1081:1140" placeholder="SELECT NAME,... USER" />
+            <marker date="1455777412000" expanded="true" signature="1343:1379" placeholder="select statu... user" />
+            <marker date="1455777412000" expanded="true" signature="1343:1380" placeholder="select statu... user" />
+            <marker date="1455777412000" expanded="true" signature="1343:1397" placeholder="select statu... user" />
+            <marker date="1455777412000" expanded="true" signature="1587:1629" placeholder="select statu... user" />
+            <marker date="1455777412000" expanded="true" signature="1587:1635" placeholder="select role user" />
+            <marker date="1455777412000" expanded="true" signature="1587:1642" placeholder="select from user" />
+            <marker date="1455777412000" expanded="true" signature="1587:1643" placeholder="select role user" />
+            <marker date="1455777412000" expanded="true" signature="1877:1974" placeholder="insert into user... " />
+            <marker date="1455777412000" expanded="true" signature="2230:2280" placeholder="select name,... USER" />
+            <marker date="1455777412000" expanded="true" signature="2445:2485" placeholder="select name,... USER" />
+            <marker date="1455777412000" expanded="true" signature="2650:2696" placeholder="select name,... USER" />
+            <marker date="1455777412000" expanded="true" signature="3002:3044" placeholder="update user " />
+            <marker date="1455777412000" expanded="true" signature="3267:3312" placeholder="update USER " />
+            <marker date="1455777412000" expanded="true" signature="3528:3569" placeholder="update USER " />
+            <marker date="1455777412000" expanded="true" signature="3768:3804" placeholder="select name,... USER" />
+            <marker date="1455777412000" expanded="true" signature="4074:4119" placeholder="update USER " />
+            <marker date="1455777412000" expanded="true" signature="4333:4366" placeholder="delete from " />
+            <marker date="1455777412000" expanded="true" signature="4350:4366" placeholder="update USER " />
+            <marker date="1455777412000" expanded="true" signature="4562:4611" placeholder="insert into log... " />
+            <marker date="1455777412000" expanded="true" signature="4843:4857" placeholder="select name,... USER" />
+            <marker date="1455777412000" expanded="true" signature="4843:4873" placeholder="select * fro... USER" />
+            <marker date="1455777412000" expanded="true" signature="4843:4874" placeholder="select * fro... USER" />
+            <marker date="1455777412000" expanded="true" signature="5157:5199" placeholder="update user " />
           </folding>
         </state>
       </provider>
@@ -1984,19 +1827,30 @@
     <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/backend/logic/handle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/backend/db/sql_api.py">
+    <entry file="file://$PROJECT_DIR$/stu103151/days02/shopping/shop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7905918">
-          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stu103151/days05/shop/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59002167">
+          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
           <folding>
-            <marker date="1455721915000" expanded="true" signature="797:816" placeholder="select * fro... log" />
-            <marker date="1455721915000" expanded="true" signature="1170:1204" placeholder="select price... goods" />
-            <marker date="1455721915000" expanded="true" signature="1170:1205" placeholder="select price... goods" />
+            <element signature="e#235#281#0" expanded="false" />
+            <element signature="e#305#549#0" expanded="false" />
+            <element signature="e#573#679#0" expanded="false" />
+            <element signature="e#704#754#0" expanded="false" />
+            <element signature="e#775#1156#0" expanded="false" />
+            <element signature="e#1183#1235#0" expanded="false" />
           </folding>
         </state>
       </provider>

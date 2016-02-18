@@ -38,6 +38,7 @@ def nomal():
         raw = input('1  额度查询\n2  转账\n3  取款\n4  存款\n5  账单查询\n6  退出\n请输入您要办理的业务: ').strip()
         if raw == '1':
             print('您的额度为:%s\n'%(handle.amount(i_name)))
+            #print('您的额度为:%s\n'%(handle.q_amount('6272121765319008')))
             continue
         elif raw == '2':
             n = True

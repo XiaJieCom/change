@@ -34,12 +34,21 @@ def close(cursor, conn):
     conn_close(conn)
 
 def auth(name,passwd):
-    v1=name
-    v2=passwd
+    data = name,passwd
     sql = 'SELECT NAME,account from USER WHERE NAME = (%s) and passwd = (%s)'
     conn = get_conn()
     cursor = get_cursor(conn)
-    result = cursor.execute(sql,(v1,v2))
+    result = cursor.execute(sql,data)
+    conn.commit()
+    close(cursor, conn)
+    if result != 0:
+        return True
+def s_auth(account,passwd):
+    data = account,passwd
+    sql = 'SELECT account from USER WHERE account = %s and passwd = %s'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,data)
     conn.commit()
     close(cursor, conn)
     if result != 0:
@@ -78,6 +87,12 @@ def select(name):
     cursor = get_cursor(conn)
     result = cursor.execute(sql,name)
     return cursor.fetchone()[2]
+def select_amount(account):
+    sql = 'select amount from USER where account = %s'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,account)
+    return cursor.fetchone()
 def select_name(i_account):
     sql = 'select name,account from USER where account = %s'
     conn = get_conn()
@@ -91,6 +106,15 @@ def update(name,new_amount):
     #sql = "update user set amount = '%s'  where name = '%s'"%(name,new_amount)
     sql = 'update USER set amount = %s  where name = %s'
     data = new_amount,name
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,data)
+    conn.commit()
+    close(cursor, conn)
+    return result
+def up_amount(account,amount):
+    sql = 'update USER set amount = %s  where account = %s'
+    data = amount,account
     conn = get_conn()
     cursor = get_cursor(conn)
     result = cursor.execute(sql,data)

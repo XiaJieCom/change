@@ -55,7 +55,22 @@ def select_price(id):
     result = cursor.execute(sql,id)
     cursorclass = pymysql.cursors.DictCursor
     return list(cursor.fetchone())
-
+def select_name(id):
+    sql = 'select name from goods WHERE id = %s'
+    conn = get_conn()
+    cursor = get_cursor(conn)
+    result = cursor.execute(sql,id)
+    cursorclass = pymysql.cursors.DictCursor
+    return list(cursor.fetchone())
+def insert(name,passwd,account,mail,status,date):
+      sql = 'insert into user(name,passwd,account,mail,status,create_time) values(%s,%s,%s,%s,%s,%s)'
+      values = [name,passwd,account,mail,status,date]
+      conn = get_conn()
+      cursor = get_cursor(conn)
+      result = cursor.execute(sql,values)
+      conn.commit()
+      close(cursor, conn)
+      return result
 
 
 
