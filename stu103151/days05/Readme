@@ -1,0 +1,35 @@
+程序介绍:
+    实现ATM和购物商城的基本功能
+
+├── atm                     #ATM主程序目录
+│   ├── __init__.py
+│   ├── backend             #后台处理目录
+│   │   ├── __init__.py
+│   │   ├── db              #数据库相关目录
+│   │   │   ├── __init__.py
+│   │   │   └── sql_api.py  #操作数据库
+│   │   └── logic           #逻辑处理目录
+│   │       ├── __init__.py
+│   │       └── handle.py   #实现主要功能
+│   ├── config              #配置文件
+│   │   ├── __init__.py
+│   │   └── settings.py     #数据库连接文件
+│   └── login.py            #执行程序,注册/登录/查询/转账等功能
+└── shop                    #购物商城主程序目录
+    ├── __init__.py
+    ├── backend             #后台处理目录
+    │   ├── __init__.py
+    │   ├── db              #数据库相关目录
+    │   │   ├── __init__.py
+    │   │   └── sql_api.py  #操作数据库
+    │   └── logic           #逻辑处理目录
+    │       ├── __init__.py
+    │       └── handle.py   #实现主要功能
+    ├── config              #配置文件
+    │   ├── __init__.py
+    │   └── settings.py     #数据库连接文件
+    └── login.py            #程序入口,购物/结算等
+
+ATM:
+
+执行login.py,

@@ -70,7 +70,7 @@ if __name__ == '__main__':
             #一种结算方式,登录商城账号,结合卡号
             raw = input("\n登录后支付（l)\n直接支付 (p)\n\n您的选择：")
             if raw == 'p':
-                #使用atm的转账功能
+                #支付等于转账
                 i = 0
                 while i < 3:
                     u_account = input('请输入您的银行卡号: ').strip()
