@@ -1,0 +1,84 @@
+-- MySQL dump 10.13  Distrib 5.7.10, for osx10.10 (x86_64)
+--
+-- Host: localhost    Database: atm
+-- ------------------------------------------------------
+-- Server version	5.7.10
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `log`
+--
+
+DROP TABLE IF EXISTS `log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `event` varchar(255) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `log`
+--
+
+LOCK TABLES `log` WRITE;
+/*!40000 ALTER TABLE `log` DISABLE KEYS */;
+INSERT INTO `log` VALUES (21,'sd','sd 转出 20000 .','2016-02-17 18:15:39'),(22,'sd','sd 存款 100 .','2016-02-17 18:20:51'),(23,'sd','sd 转出 100 .','2016-02-17 18:20:59');
+/*!40000 ALTER TABLE `log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role` varchar(255) DEFAULT NULL,
+  `name` varchar(11) NOT NULL,
+  `passwd` varchar(32) NOT NULL,
+  `account` varchar(16) NOT NULL,
+  `amount` int(11) DEFAULT NULL,
+  `mail` varchar(32) DEFAULT NULL,
+  `status` bit(1) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (10,'normal','tom','123','6282781692694856',193003,'13121889803@163.com','\0',NULL),(11,'normal','shop','123','6224407126081192',44181655,'13121889803@163.com','',NULL),(31,'normal','O2VM','642467','6272659517115807',12994063,'46268334911@163.com','\0','2016-02-06 16:01:17'),(32,'normal','77JB','173516','6274823282576104',18269306,'84080605397@163.com','\0','2016-02-06 16:01:20'),(33,'normal','0MRH','948496','6295947239768057',55359657,'88834961758@163.com','\0','2016-02-06 16:10:58'),(34,'normal','TBXG','251363','6204927305658410',70150011,'45876617897@163.com','\0','2016-02-06 16:11:30'),(37,'normal','tom1','123','6272121765319008',15309990,'16277657007@163.com','\0','2016-02-11 14:57:22'),(38,'admin','admin','admin','6209335737680395',342724,'39284461891@163.com','\0','2016-02-11 15:01:56'),(39,NULL,'sd','123','6202559700866956',39500000,'32389813579@163.com','\0','2016-02-17 18:04:44');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-02-19 10:13:52

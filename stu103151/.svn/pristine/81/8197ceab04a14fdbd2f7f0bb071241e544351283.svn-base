@@ -20,12 +20,4 @@ def reg(name,passwd,account,mail,status,date):
 def active(name):
     func = sql_api.active(name)
     return func
-def login(name,passwd):
-    func = sql_api.auth(name,passwd)
-    return func
-def account(name):
-    func = sql_api.account(name)
-    return func
-def clock_account(name):
-    func = sql_api.clock_account(name)
-    return func
+

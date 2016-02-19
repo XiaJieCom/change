@@ -71,43 +71,8 @@ def insert(name,passwd,account,mail,status,date):
       conn.commit()
       close(cursor, conn)
       return result
-def active(name):
-    sql = 'select status from user where name = %s and status = 1'
-    conn = get_conn()
-    cursor = get_cursor(conn)
-    result = cursor.execute(sql,name)
-    if result == 0:
-        return True
-    else:
-        return False
-def auth(name,passwd):
-    data = name,passwd
-    sql = 'SELECT NAME,account from USER WHERE NAME = (%s) and passwd = (%s)'
-    conn = get_conn()
-    cursor = get_cursor(conn)
-    result = cursor.execute(sql,data)
-    conn.commit()
-    close(cursor, conn)
-    if result != 0:
-        return True
-def account(name):
-    sql = 'select account from USER where name = %s'
-    conn = get_conn()
-    cursor = get_cursor(conn)
-    result = cursor.execute(sql,name)
-    if result == 0:
-        return False
-    else:
-        return cursor.fetchone()
-def clock_account(name):
-    sql = 'update USER set status = 1  where name = %s'
-    data = name
-    conn = get_conn()
-    cursor = get_cursor(conn)
-    result = cursor.execute(sql,data)
-    conn.commit()
-    close(cursor, conn)
-    return result
+
+
 
 
 

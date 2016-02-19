@@ -26,6 +26,3 @@ def login(name,passwd):
 def account(name):
     func = sql_api.account(name)
     return func
-def clock_account(name):
-    func = sql_api.clock_account(name)
-    return func

@@ -99,15 +99,6 @@ def account(name):
         return False
     else:
         return cursor.fetchone()
-def clock_account(name):
-    sql = 'update USER set status = 1  where name = %s'
-    data = name
-    conn = get_conn()
-    cursor = get_cursor(conn)
-    result = cursor.execute(sql,data)
-    conn.commit()
-    close(cursor, conn)
-    return result
 
 
 
