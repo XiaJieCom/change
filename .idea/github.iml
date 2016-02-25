@@ -5,5 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="binges" />
+    <orderEntry type="module" module-name="time" />
+    <orderEntry type="module" module-name="pys12_good_homeworks" />
   </component>
 </module>

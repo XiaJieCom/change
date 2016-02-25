@@ -1,0 +1,6 @@
+2016-02-20 16:49:26,621 - Test - WARNING - warn!
+2016-02-20 16:49:26,622 - Test - ERROR - error!!
+2016-02-20 16:49:26,622 - Test - CRITICAL - critical!!!
+2016-02-25 16:31:30,146 - Test - WARNING - warn!
+2016-02-25 16:31:30,147 - Test - ERROR - error!!
+2016-02-25 16:31:30,147 - Test - CRITICAL - critical!!!
