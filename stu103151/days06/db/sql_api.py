@@ -38,19 +38,36 @@ def close(cursor, conn):
     conn_close(conn)
 
 def select_all(table_name):
-    sql = 'select id,name from ' + table_name
+    '''
+    查询某张表的 ID/name/money 信息
+    :param table_name:
+    :return: ID/name/money
+    '''
+    sql = 'select id,name,money from ' + table_name
     conn = get_conn()
     cursor = get_cursor(conn)
     result = cursor.execute(sql)
     for row in cursor.fetchall():
-        print(row[0],row[1])
+        print(row[0],row[1],row[2])
 def select_equipment(table_name,id):
+    '''
+    查询某张表的 name 根据ID
+    :param table_name:
+    :param id:
+    :return: name
+    '''
     sql = "select name from "+ table_name +" where id = %s"
     conn = get_conn()
     cursor = get_cursor(conn)
     result = cursor.execute(sql % id)
     return cursor.fetchone()
 def select_equipment_power(table_name,column):
+    '''
+    查询某表的 power 根据表名和name
+    :param table_name:
+    :param column:
+    :return: power
+    '''
     sql = "select power from "+ table_name +" where name = %s"
     conn = get_conn()
     cursor = get_cursor(conn)

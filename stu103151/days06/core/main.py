@@ -1,6 +1,9 @@
 import random
 import core.handle as handle
 class Role(object):
+    '''
+    定义一个通用的Role类
+    '''
     def __init__(self,name,armor,weapon,life_value=100,money=0):
         self.name = name
         self.armor = armor
@@ -8,35 +11,46 @@ class Role(object):
         self.life_value = life_value
         self.money = money
     def power(self):
+        '''
+        根据weapon和armor/life_value的值求出power
+        :return:
+        '''
         p_armor = handle.select_equipment_power('armor',self.armor)
         p_weapon = handle.select_equipment_power('weapon',self.weapon)
         power = p_armor[0] + p_weapon[0] + self.life_value
         return power
     def damage(self):
+        '''
+        根据weapon和armor计算出来伤害值
+        :return:
+        '''
         value_data = handle.select_equipment_power('weapon',self.weapon)[0] + handle.select_equipment_power('armor',self.armor)[0]
         return value_data
-    def win(self,role1,role2,power1,power2):
-        if power1 > power2:
-            role1.money = role1.money + role2.money
-
-        pass
-
 
 class Monster(Role):
+    '''
+    定义怪兽的类
+    '''
     def __int__(self,name,armor,weapon,life_value):
         super(Role,self).__init__(name,armor,weapon,life_value,money=0)
 class Human(Role):
+    '''
+    定义人类的类
+    '''
     def __int__(self,name,armor,weapon,life_value,):
         super(Role,self).__init__(name,armor,weapon,life_value,money=0)
-
-    def update_armor(self):
+    def buy(self):
         '''买装备'''
-    def update_weapon(self):
-        '''换武器'''
+    def pick(self):
+        '''捡钱'''
 
 
 
 def name():
+    '''
+    随机生成怪物的名字
+    :return:
+    '''
     f_name = {
         1:'优雅的',
         2:'蠢蠢的',
@@ -67,6 +81,10 @@ def name():
     name = f_name[f]+l_name[l]
     return name
 def random_value():
+    '''
+    随机产生数字,便于随机分配给怪兽属性
+    :return:
+    '''
     func = random.randint(1,100)
     return func
 def run():
@@ -74,6 +92,7 @@ def run():
     this function will be called right a way when the program started, here handles the user interaction stuff
     :return:
     '''
+
     print('这是一片平静的小山村...\n走出来的是一位少年正要去冒险.\n只见他来到铁匠铺门前和铁匠打着招呼.\n这是所有的铠甲,你想要什么呢?大胡子矮人问他.    ')
     handle.select_all('armor')
     raw = input('少年一眼就看上了这个:    ').strip()
@@ -89,41 +108,65 @@ def run():
 
     #初始化一个怪兽
     armor = handle.select_equipment('armor',random.randint(1,7))
-    weapon = handle.select_equipment('weapon',random.randint(1,6))
+    weapon = handle.select_equipment('weapon',random.randint(1,8))
 
     m1 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m2 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m3 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m4 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m5 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m6 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m8 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m9 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
-    m10 = Monster(name(),armor,weapon,life_value=random_value(),money=random_value())
+
 
     print('%s武力值挺高的,都到了%s!'%(h1.name,h1.damage()))
     print(m1.power())
+    if h1.power() >= m1.power():
+        tmp1 = h1.power()
+        tmp2 = m1.power()
+        i = 1
+        while tmp1 > 0:
 
-    while True:
-        a = h1.damage()
-        b = m1.damage()
-        ap = h1.power()
-        bp = m1.power()
-        if h1.power() > m1.power():
-            h1.money = h1.money + m1.money
-            print('只见%s一招下去,%s倒下了...\n哇哦!还有%s个金币!!!现在我有%s个金币,可以买个大包子啦!!!'%(h1.name,m1.name,m1.money,h1.money))
-            if h1.weapon < m1.weapon:
-                h1.weapon = m1.weapon
-                print('%s,你的%s不错,我就拿走了...'%(m1.name,m1.weapon[0]))
+            print('第%s回合!'%i)
+            if tmp2 - h1.damage() <= 0:
+                print('%s减去了%s的血!他倒下啦!!!\n还有%s个金币!!!!'%(m1.name,h1.damage(),m1.money))
+
+                if handle.select_equipment_power('weapon',m1.weapon) > handle.select_equipment_power('weapon',h1.weapon):
+                    h1.weapon = m1.weapon
+                    print('\n%s的武器爆出来啦!\n%s捡起来看了看,感觉还不错,把武器换成了这%s!'% (m1.name,h1.name,h1.weapon[0]))
+
+                break
             else:
-                print('%s,你的%s不好,我不要了...'%(m1.name,m1.weapon[0]))
-            exit()
-        elif h1.power() == m1.power():
-            print('只见%s一招下去,和%s都倒退了两步...'%(h1.name,m1.name))
-            exit()
+                tmp2 = tmp2 - h1.damage()
+                print('%s减去了%s的血!剩余%s!!!'%(m1.name,h1.damage(),(tmp2)))
+                tmp1 = tmp1 - m1.damage()
+                print('%s减去了%s的血!剩余%s!!!'%(h1.name,m1.damage(),tmp1))
+
+            i += 1
         else:
-            print('只见%s一招下去,%s倒下了...'%(m1.name,h1.name))
-            exit()
+            print('%s倒下啦!!!'%h1.name)
+    else:
+        tmp1 = h1.power()
+        tmp2 = m1.power()
+        i = 1
+        while tmp2 > 0:
+
+            print('第%s回合!'%i)
+            if tmp1 - m1.damage() <= 0:
+                print('%s减去了%s的血!他倒下啦!!!'%(h1.name,m1.damage()))
+                exit()
+            else:
+                tmp1 = tmp1 - m1.damage()
+                tmp2 = tmp2 - h1.damage()
+                print('%s减去了%s的血!剩余%s!!!'%(h1.name,m1.damage(),tmp1))
+                print('%s减去了%s的血!剩余%s!!!'%(m1.name,h1.damage(),(tmp2)))
+            i += 1
+        else:
+            print('%s减去了%s的血!他倒下啦!!!\n还有%s个金币!!!!'%(m1.name,h1.damage(),m1.money))
+
+
+
+
+
+
+
+
+
+
 
 
 
