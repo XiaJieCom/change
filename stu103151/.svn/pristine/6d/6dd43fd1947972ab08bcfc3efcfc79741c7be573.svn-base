@@ -1,0 +1,23 @@
+blog:http://www.cnblogs.com/xiajie/p/5225713.html
+功能:实现FTP上传下载等基本功能
+
+目录:
+├── new_client.py   客户端程序
+├── new_server.py   服务器程序
+
+执行流程:
+1.客户端输入文件路径和文件名
+
+  #如果文件不存在,会提示该文件或目录不存在,并跳出
+
+The file path:/tmp/test.log
+
+#判断出文件名和大小,发送给服务端
+name :test.log    size:443632
+
+2.服务端接收数据
+
+   #如果接收信息为空,就跳出,执行下一次循环
+
+Server is waiting ...
+name :test.log    size:443632
