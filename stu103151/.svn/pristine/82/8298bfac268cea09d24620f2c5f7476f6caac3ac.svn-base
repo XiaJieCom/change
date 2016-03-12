@@ -1,0 +1,6 @@
+[IP]
+ip = 10.37.129.6;10.37.129.7
+[Name]
+username = root
+[Passwd]
+passwd = youxia

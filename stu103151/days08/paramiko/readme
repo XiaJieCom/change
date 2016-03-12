@@ -1,0 +1,28 @@
+功能:实现对远程主机的文件上传下载/日志记录/分组
+目录:
+├── config.ini  #配置文件,IP等信息
+├── manager.py  #程序主目录
+|paramiko.log   #命令执行日志记录
+|paramiko-send.log  #文件传输记录
+
+执行流程:
+
+['10.37.129.6', '10.37.129.7']
+请选择功能:1.执行命令  2.批量上传文件到主机 1
+
+Filesystem      Size   Used  Avail Capacity  iused    ifree %iused  Mounted on
+/dev/disk1     112Gi   67Gi   45Gi    60% 17504847 11818415   60%   /
+devfs          185Ki  185Ki    0Bi   100%      640        0  100%   /dev
+map -hosts       0Bi    0Bi    0Bi   100%        0        0  100%   /net
+map auto_home    0Bi    0Bi    0Bi   100%        0        0  100%   /home
+/dev/disk2s1   121Gi   46Gi   74Gi    39%   380410   609534   38%   /Volumes/Backup
+Filesystem      Size   Used  Avail Capacity  iused    ifree %iused  Mounted on
+/dev/disk1     112Gi   67Gi   45Gi    60% 17504847 11818415   60%   /
+devfs          185Ki  185Ki    0Bi   100%      640        0  100%   /dev
+map -hosts       0Bi    0Bi    0Bi   100%        0        0  100%   /net
+map auto_home    0Bi    0Bi    0Bi   100%        0        0  100%   /home
+/dev/disk2s1   121Gi   46Gi   74Gi    39%   380410   609534   38%   /Volumes/Backup
+
+请选择功能:1.执行命令  2.批量上传文件到主机 2
+
+将src路径文件上传到des路径

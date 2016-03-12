@@ -1,0 +1,30 @@
+blog:   http://www.cnblogs.com/xiajie/p/5250675.html
+功能:实现ftp的基本功能
+
+├── socket_client.py    #客户端主程序
+├── socket_server.py    #服务端主程序
+
+执行流程:
+1.启动server端
+2.启动client端
+---欢迎使用FTP客户端---
+get filename
+put filename
+exit
+help
+
+>>get /tmp/a.file   #输入命令信息
+--> transfer|get|file does not exist #提示文件不存在
+>>get /tmp/a.log    #输入正确信息
+--> transfer|get|ready|1881 #接收文件大小
+1881
+54.4391%                    #打印传输的百分比
+100.0000%
+---recv file:/tmp/a.log---  #文件传输完成
+>> put /tmp/b.log           #上传文件
+That's ok!
+--> transfer|put|ready|1881 #接收文件大小
+1881
+--> /tmp/a.log              #显示进度条,但是该进度条不准确...
+Percent: [######################################################  ] 100%
+---recv file:/tmp/b.log---  #传输完成,将文件正常上传到/tmp/server
