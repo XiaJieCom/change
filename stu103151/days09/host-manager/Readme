@@ -1,0 +1,47 @@
+blog:
+    http://www.cnblogs.com/xiajie/p/5287777.html
+功能要求:
+    实现类似saltstack的批量主机管理工具
+
+结构目录:
+├── bin                 #起始目录
+│   ├── __init__.py
+│   └── start.py        #启动程序
+├── conf
+│   ├── __init__.py
+│   └── settings.py     #配置信息,读取host.json等主机信息
+├── core
+│   ├── __init__.py
+│   ├── config_handle.py#读取更新host.json主机信息
+│   └── main.py         #主程序文件
+└── db
+    ├── __init__.py
+    ├── host.json       #主机信息
+    └── userdb.py       #用户信息
+
+执行流程:
+
+#输入用户名密码,错误三次自动退出
+
+Please input your name: tom
+Please input your password: 123
+This is menu
+
+#输入执行命令,如果为show,默认打印出所有分组信息
+
+>> show
+This is all of hosts:
+**********************groups**********************
+db
+web
+nginx
+**************************************************
+
+#添加分组,如果输入元素小于5,提示格式不正确
+
+>> add -g test -h 1.1.1.10
+This is add,example add -g xxx -h x.x.x.x
+['test']
+['1.1.1.10']
+
+#更新后的主机信息写入host.json
