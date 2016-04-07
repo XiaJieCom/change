@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人注册</title>
+    <link href="./image/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+    <div>
+        <form action="http://10.0.4.42:8000/django_form/" enctype="multipart/form-data" method="post">
+            <hr/>
+            <p>用 户 名 <input type="text" name="username"/></p>
+            <p>设置密码 <input type="password" name="passwd"/></p>
+            <p>确认密码 <input type="password" name="passwd"/></p>
+            <p>
+                性别
+                    男 :<input name="gender" type="radio" value="1"/>
+                    女 :<input name="gender" type="radio" value="0"/>
+            </p>
+            <p>
+                婚否
+                    未婚 :<input name="merry" type="radio" value="0"/>
+                    已婚 :<input name="merry" type="radio" value="1"/>
+            </p>
+
+            <p>
+                篮球:<input name="favor" type="checkbox" value="1"/>
+                足球:<input name="favor" type="checkbox" value="2"/>
+                排球:<input name="favor" type="checkbox" value="3"/>
+            </p>
+            <p> 地区
+                <select>
+                    <optgroup label="华北">
+                        <option value="bj">北京</option>
+                        <option value="hb">河北</option>
+                        <option value="sd">山东</option>
+                    </optgroup>
+                    <optgroup label="华南">
+                        <option value="gd">广东</option>
+                        <option value="gx">广西</option>
+                        <option value="js">江苏</option>
+                    </optgroup>
+                    <optgroup label="东北">
+                        <option value="hlj">黑龙江</option>
+                        <option value="heb">哈尔滨</option>
+                        <option value="ln">辽宁</option>
+                    </optgroup>
+                </select>
+            </p>
+            <hr/>
+                <p>手机验证     <input type="text" name="celphone"/></p>
+                <p>验 证 码     <input type="text" name="checkcode"/></p>
+                <p>手机验证码   <input type="text" name="cell_checkcode"/></p>
+            <hr/>
+             <input type="submit" value="立即注册"/>
+        </form>
+    </div>
+
+
+</body>
+</html>
