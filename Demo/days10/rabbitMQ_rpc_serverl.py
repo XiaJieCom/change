@@ -2,24 +2,24 @@
 # -*- coding:utf-8 -*-
 import pika
 import time
+
+#连接服务器
 connection = pika.BlockingConnection(pika.ConnectionParameters(
         host='localhost'))
 channel = connection.channel()
 channel.queue_declare(queue='rpc_queue')
+#声明rpc的queue
 
-def fib(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
+def cmd(command):
+    if len(command) == 0:
+        print('Error!')
     else:
-        return fib(n-1) + fib(n-2)
+        print('ok')
 
 def on_request(ch, method, props, body):
-    n = int(body)
-
-    print(" [.] fib(%s)" % n)
-    response = fib(n)
+    command = str(body)
+    print(" [.] fib(%s)" % command)
+    response = cmd(command)
 
     ch.basic_publish(exchange='',
                      routing_key=props.reply_to,
@@ -31,5 +31,5 @@ def on_request(ch, method, props, body):
 channel.basic_qos(prefetch_count=1)
 channel.basic_consume(on_request, queue='rpc_queue')
 
-print(" [x] Awaiting RPC requests")
+print(" Awaiting RPC requests")
 channel.start_consuming()

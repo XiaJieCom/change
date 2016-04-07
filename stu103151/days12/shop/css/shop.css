@@ -1,0 +1,70 @@
+body {
+    font: 12px/150% Arial,Verdana,"微软雅黑";
+    margin:0;
+
+    background:#FFF;
+}
+#container {
+    width:100%;
+    margin: 0 auto;/* 两个值,第一个0代表上下边距为0,Auto代表自适应*/
+}
+#Head {
+    width: 100%;;
+    margin:0 auto;
+    height:100px;
+
+
+}
+#h_total{
+    width: 100%;
+    height: 30px;
+    background-color: #f5fafe;
+    position: relative;
+    top:10px;
+    left:30px;
+}
+.nav li{
+    display: inline;
+    height: 60px;
+
+}
+.nav li a {
+    display: inline-block;
+    padding:0 3px;
+    height:30px;
+    line-height:30px;
+    float: left;
+}
+#PageBody {
+    width:100%;
+    margin: 10px auto;
+    height:500px;
+    background:#CCFF00
+}
+#LeftBody{
+    width: 20%;
+    height: 95%;
+    background: #b20101;
+    float: left;
+    margin: 10px;
+}
+#MainBody{
+    width: 53%;
+    height: 95%;
+    background: #000000;
+    float: left;
+
+}
+#RightBody{
+    width: 23%;
+    height: 95%;
+    background: #f5fafe;
+    float: left;
+    margin: 10px;
+}
+#Footer {
+    width:100%;
+    margin:0 auto;
+    height:50px;
+    background:#00FFFF
+}

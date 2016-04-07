@@ -5,6 +5,65 @@
     <title>Title</title>
 </head>
 <body>
+    <form action="http://10.0.4.42:8000/django_form/" enctype="multipart/form-data" method="post">
+        <p>
+            host:<input type="text" name="host"/>
+            passwd:<input type="password" name="passwd"/>
+        </p>
+        <div>
+            <h6>爱好</h6>
+            篮球:<input name="favor" type="checkbox" value="1"/>
+            足球:<input name="favor" type="checkbox" value="2"/>
+            排球:<input name="favor" type="checkbox" value="3"/>
+        </div>
+        <hr/>
+        <div>
+            <h6>性别</h6>
+            男:<input name="gender"type="radio" value="1">
+            女:<input name="gender"type="radio" value="0">
+        </div>
+        <hr/>
+        <div>
+            <h6>城市</h6>
+            <select name="city">
+                <option value="sh">上海</option>
+                <option value="bj">北京</option>
+                <option value="hk">香港</option>
+            </select>
+        </div>
+        <hr/>
+        <div>
+            <textarea name="mono">默认的备注</textarea>
+        </div>
+        <hr/>
+        <div>
+            <h6>文件</h6>
+            <input type="file" name="file_name">
+        </div>
+        <input type="submit" value="submit">
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

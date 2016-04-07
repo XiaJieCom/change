@@ -1,0 +1,6 @@
+[IP]
+ip = 127.0.0.1
+[db_user]
+username = shop
+[db_passwd]
+passwd = 123
