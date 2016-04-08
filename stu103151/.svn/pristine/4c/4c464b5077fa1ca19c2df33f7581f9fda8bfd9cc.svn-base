@@ -1,0 +1,23 @@
+Blog	http://www.cnblogs.com/xiajie/p/5366583.html
+要求:
+1.注册页面跳转
+2.购物商场
+
+
+程序目录结构
+.
+├── README
+├── registry                注册页面跳转
+│   ├── image               图片存放路径
+│   │   └── favicon.ico     logo
+│   ├── index.html          开始页
+│   └── registry.html       注册页面
+└── shop                    购物商城
+    ├── css                 CSS目录
+    │   └── shop.css
+    ├── image               图片目录
+    │   ├── favicon.ico
+    │   └── logo-201305.png
+    └── index.html          起始页面
+
+

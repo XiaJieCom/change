@@ -2,62 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e94b40-b036-4b82-bcce-42506ba2c03e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days12/registry/image/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days12/shop/image/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/EchoClient.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/EchoServer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/demo/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/demo/pub.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/demo/redis_server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/demo/sub.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/rabbitMQ_rpc_client.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/rabbitMQ_rpc_serverl.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/rabbit_test/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/rabbit_test/receive.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/rabbit_test/send.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/recive.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/redis_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days10/send.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days11/group.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days11/inner.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days11/sql.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days12/cc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days12/cs1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days12/float1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days12/s1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days12/s2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/EchoClient.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/EchoServer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/file_client.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/file_server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/rabbit/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/rabbit/rabbitMQ_rpc_client.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days10/rabbit/rabbitMQ_rpc_server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/readme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/bin/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/bin/start.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/conf/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/conf/config.ini" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/core/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/core/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/db/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days11/work/db/sql_init.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days12/registry/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days12/registry/registry.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days12/shop/css/shop.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days12/shop/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103151/days12/README" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Downloads/paramiko/demos/.idea/demos.iml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Downloads/paramiko/demos/.idea/encodings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Downloads/paramiko/demos/.idea/misc.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Downloads/paramiko/demos/.idea/modules.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Downloads/paramiko/demos/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/github.iml" afterPath="$PROJECT_DIR$/.idea/github.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days12/shop/image/logo-201305.png" afterPath="$PROJECT_DIR$/stu103151/days12/shop/image/logo-201305.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/days12/float1.html" afterPath="$PROJECT_DIR$/Demo/days12/float1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days12/shop/css/shop.css" afterPath="$PROJECT_DIR$/stu103151/days12/shop/css/shop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stu103151/days12/shop/index.html" afterPath="$PROJECT_DIR$/stu103151/days12/shop/index.html" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/Downloads/paramiko/demos/interactive.py" afterPath="$USER_HOME$/Downloads/paramiko/demos/interactive.py" />
     </list>
     <ignored path="github.iws" />
@@ -170,45 +125,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stu103151/days12/shop/index.html">
+      <file leaf-file-name="README" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stu103151/days12/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43793103">
-              <caret line="100" column="133" selection-start-line="100" selection-start-column="133" selection-end-line="100" selection-end-column="133" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#a#0;n#li#7;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#a#0;n#li#8;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#select#0;n#a#0;n#li#8;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#a#0;n#li#9;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#optgroup#0;n#select#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#optgroup#1;n#select#0;n#a#0;n#li#10;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stu103151/days12/shop/css/shop.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="s1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo/days12/s1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9607842">
-              <caret line="78" column="58" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.50151974">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -243,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/stu103151/days09/core/config_handle.py" />
         <option value="$PROJECT_DIR$/stu103151/days09/core/main.py" />
         <option value="$PROJECT_DIR$/stu103151/days09/select/server.py" />
         <option value="$PROJECT_DIR$/stu103151/days09/host-manager/Readme" />
@@ -290,10 +210,11 @@
         <option value="$PROJECT_DIR$/stu103151/registry/index.html" />
         <option value="$PROJECT_DIR$/stu103151/registry/registry.html" />
         <option value="$PROJECT_DIR$/stu103151/days12/registry/index.html" />
-        <option value="$PROJECT_DIR$/Demo/days12/float1.html" />
-        <option value="$PROJECT_DIR$/stu103151/days12/shop/css/shop.css" />
         <option value="$PROJECT_DIR$/Demo/days12/s1.html" />
+        <option value="$PROJECT_DIR$/Demo/days12/float1.html" />
         <option value="$PROJECT_DIR$/stu103151/days12/shop/index.html" />
+        <option value="$PROJECT_DIR$/stu103151/days12/shop/css/shop.css" />
+        <option value="$PROJECT_DIR$/stu103151/days12/README" />
       </list>
     </option>
   </component>
@@ -303,8 +224,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="198" />
-    <option name="y" value="33" />
+    <option name="x" value="354" />
+    <option name="y" value="23" />
     <option name="width" value="989" />
     <option name="height" value="776" />
   </component>
@@ -438,6 +359,24 @@
               <option name="myItemId" value="days12" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stu103151" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="days12" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -510,6 +449,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="days12" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registry" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -992,10 +935,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="198" y="33" width="989" height="776" extended-state="0" />
+    <frame x="354" y="23" width="989" height="776" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15733896" sideWeight="0.6023529" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43611404" sideWeight="0.5947522" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751092" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4718935" sideWeight="0.37322834" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1004,7 +947,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896653" sideWeight="0.6267716" order="2" side_tool="false" content_ui="tabs" x="322" y="202" width="906" height="419" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24896608" sideWeight="0.4992722" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2561863" sideWeight="0.5496063" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17676768" sideWeight="0.39764705" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43611404" sideWeight="0.4052478" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49053857" sideWeight="0.4967012" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270073" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1645,20 +1588,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stu103151/days09/host-manager/core/config_handle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02276176">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days09/host-manager/conf/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days09/host-manager/db/host.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1939,21 +1868,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days12/registry/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56782335">
-          <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days12/registry/registry.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7870662">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/days12/cc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09463722">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/days12/cs1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11829653">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1966,59 +1899,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/days12/float1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49684542">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/stu103151/days12/shop/image/logo-201305.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/days12/cs1.html">
+    <entry file="file://$PROJECT_DIR$/stu103151/days12/registry/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11829653">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.85804415">
+          <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/days12/cc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09463722">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days12/shop/css/shop.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/days12/s1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9607842">
-          <caret line="78" column="58" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.7097792">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days12/shop/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43793103">
-          <caret line="100" column="133" selection-start-line="100" selection-start-column="133" selection-end-line="100" selection-end-column="133" />
+        <state vertical-scroll-proportion="0.28336078">
+          <caret line="267" column="19" selection-start-line="267" selection-start-column="19" selection-end-line="267" selection-end-column="19" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#select#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#0;n#a#0;n#li#7;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -2032,7 +1941,52 @@
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#a#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#5;n#ul#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/days12/s1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77759475">
+          <caret line="193" column="33" selection-start-line="193" selection-start-column="16" selection-end-line="193" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/days12/float1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49684542">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stu103151/days12/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50151974">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
