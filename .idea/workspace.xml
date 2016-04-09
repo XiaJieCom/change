@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e94b40-b036-4b82-bcce-42506ba2c03e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/218F0D0D10035B05C5E4C47CE5D4F3DA.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/8283459FDA040DE67D955D367A27745B.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/C46A8E0C772970048C9B60C2E6F4A78B.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/C669C43861EFD430686CE8077BFC6EA1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/j1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/jquery-2.2.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/jquery-2.2.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/days13/title.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="github.iws" />
@@ -114,31 +122,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="h5.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo/days13/h5.html">
+      <file leaf-file-name="j1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo/days13/j1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state vertical-scroll-proportion="-6.1538463">
+              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="h6.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Demo/days13/h6.html">
+      <file leaf-file-name="title.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Demo/days13/title.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5933544">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="h4.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo/days13/h4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625">
-              <caret line="17" column="13" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.35495496">
+              <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -174,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Demo/days10/sub.py" />
-        <option value="$PROJECT_DIR$/Demo/days10/pub.py" />
         <option value="$PROJECT_DIR$/Demo/days10/rabbit_test/send.py" />
         <option value="$PROJECT_DIR$/Demo/days10/rabbit_test/receive.py" />
         <option value="$PROJECT_DIR$/stu103151/days10/client.py" />
@@ -225,6 +221,8 @@
         <option value="$PROJECT_DIR$/Demo/days13/h5.html" />
         <option value="$PROJECT_DIR$/Demo/days13/ts.html" />
         <option value="$PROJECT_DIR$/Demo/days13/h6.html" />
+        <option value="$PROJECT_DIR$/Demo/days13/j1.html" />
+        <option value="$PROJECT_DIR$/Demo/days13/title.html" />
       </list>
     </option>
   </component>
@@ -234,8 +232,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="349" />
-    <option name="y" value="27" />
+    <option name="x" value="383" />
+    <option name="y" value="24" />
     <option name="width" value="885" />
     <option name="height" value="776" />
   </component>
@@ -546,6 +544,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
+  <component name="Push.Settings">
+    <excluded-roots>
+      <path value="$USER_HOME$/Downloads/paramiko" />
+    </excluded-roots>
+  </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings is-module-sdk="true">
@@ -554,17 +557,17 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Demo/days06" />
-      <recent name="$PROJECT_DIR$/stu103151/days03" />
-      <recent name="$PROJECT_DIR$/document/Service/vsftpd" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/days13" />
       <recent name="$PROJECT_DIR$/stu103151/days12/shop" />
       <recent name="$PROJECT_DIR$/stu103151/days12" />
       <recent name="$PROJECT_DIR$/stu103151/registry/image" />
       <recent name="$PROJECT_DIR$/Demo/days12" />
-      <recent name="$PROJECT_DIR$/stu103151/days11/work" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/days06" />
+      <recent name="$PROJECT_DIR$/stu103151/days03" />
+      <recent name="$PROJECT_DIR$/document/Service/vsftpd" />
     </key>
   </component>
   <component name="RunManager" selected="Python.start">
@@ -927,7 +930,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460194777163</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="work">
+      <created>1460194835434</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1460194835434</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -951,16 +960,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="349" y="27" width="885" height="776" extended-state="0" />
-    <editor active="true" />
+    <frame x="383" y="24" width="885" height="776" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13285884" sideWeight="0.5801749" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22301304" sideWeight="0.5801749" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32751092" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47076023" sideWeight="0.37322834" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1125731" sideWeight="0.37322834" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2532751" sideWeight="0.6026936" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.99415207" sideWeight="0.6026936" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24896608" sideWeight="0.4992722" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2561863" sideWeight="0.5496063" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13285884" sideWeight="0.41982508" order="2" side_tool="true" content_ui="tabs" />
@@ -1599,25 +1608,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="821" />
+      <option name="time" value="822" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stu103151/days10/file_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5250379">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stu103151/days10/EchoServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38694993">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stu103151/days10/EchoClient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3414264">
@@ -1909,7 +1904,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1938,14 +1933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/days13/h4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="17" column="13" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/days13/ts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33753943">
@@ -1954,18 +1941,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/days13/h6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5933544">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/days13/h5.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
+        <state vertical-scroll-proportion="0.47468355">
           <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/days13/h6.html">
+    <entry file="file://$PROJECT_DIR$/Demo/days13/h4.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5933544">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.403481">
+          <caret line="17" column="13" selection-start-line="7" selection-start-column="4" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/days13/j1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1538463">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/days13/title.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35495496">
+          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
           <folding />
         </state>
       </provider>
