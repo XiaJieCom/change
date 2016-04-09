@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        <style>
+            a {
+                color: #428bca;
+                text-decoration: none;
+                }
+
+                .modal-backdrop {
+                  position: fixed;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  z-index: 1050;
+                  background-color: #white;
+                  opacity: 0.8;
+                }
+
+                .modal {
+                  position: fixed;
+                  top: 30%;
+                  left: 50%;
+                  z-index: 1030;
+                }
+
+                .hide {
+                    display:none;
+                }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="button" onclick="fadeIn();"  value="加载条"/>
+        </div>
+        <div id="shade" class="modal-backdrop hide">
+            <div  class="modal">
+                <img src="./images/loading_32.gif"/>
+            </div>
+        </div>
+        <script >
+            function fadeIn() {
+                document.getElementById('shade').className = 'modal-backdrop';
+            }
+
+            function fadeOut() {
+                document.getElementById('shade').className = 'modal-backdrop hide';
+            }
+        </script>
+    </body>
+</html>
+
+实例：加载

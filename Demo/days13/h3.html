@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="container">
+        <a href="https://www.baidu.com" onclick="return AddElement();">添加</a>
+    </div>
+    <script>
+        function AddElement(){
+            var createObj = document.createElement( 'a');
+            createObj.href = 'https://www.baidu.com';
+            createObj.innerText = 'haha';
+
+            var nid = document.getElementById('container');
+            nid.appendChild(createObj);
+            return false;
+
+        }
+    </script>
+</body>
+</html>w
