@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECS</title>
+    <link rel="stylesheet" href="css/cs.css">
+    <link rel="icon" href="ico.png" type="image/x-icon" />
+</head>
+<body>
+    <div id="head">
+        <img id="logo" src="image/logo.png">
+        <!--这里是头部-->
+    </div>
+    <div id="content">
+        <div id="form">
+            <div class="name">
+                <!--<label class="label1"></label>-->
+                <input  id="username"  value="" placeholder="Username" type="text" onfocus="Focus();" onblur="Blur();"/>
+                    <label id="lable1" class="error hiden ">用户名不能为空.</label>
+            </div>
+            <div class="passwd">
+                <!--<label class="label2"></label>-->
+                <input  id="passwd" value="" placeholder="Passwd" type="text" onfocus="Focusp();" onblur="Blurp();"/>
+                <label id="lable2" class="error hiden">密码不能为空.</label>
+            </div>
+            <div id="login">
+                <!--<input type="button" value="login" onclick="window.location='manager.html'"/>-->
+                <input type="button" value="login" onclick="login();"/>
+                <p class="join">
+                    <a href="registry.html">join us</a>
+                </p>
+            </div>
+
+            <!--提交的表单-->
+        </div>
+        <!--这里是内容-->
+    </div>
+    <div style="margin: 10% 0 0 36%;width: 300px;text-align: center;color: #1d3c41">
+            <p class="m-t"> <small><b>Copyright</b> rabbit.org Organization © 2013-2016</small> </p>
+    </div>
+    <script src="js/jquery-2.2.3.js"></script>
+    <script>
+        alert('Username : admin ||  Passwd : admin');
+        function Blur(){
+            if ($("#username").val() == ''){
+                $('#lable1').removeClass('hiden');
+            }
+        }
+        function Focus(){
+            if ($("#username").val() == ''){
+                $('#lable1').addClass('hiden');
+            }
+        }
+        function Blurp(){
+            if ($("#passwd").val() == ''){
+                $('#lable2').removeClass('hiden');
+            }
+        }
+        function Focusp(){
+            if ($("#passwd").val() == ''){
+                $('#lable2').addClass('hiden');
+            }
+        }
+        function login(){
+            var valuser = $("#username").val() ;
+            var valpass = $("#passwd").val() ;
+            console.log(valuser);
+            console.log(valpass);
+            if (valuser == 'admin' && valpass == 'admin'){
+                window.location.href="./manager.html";
+            }else {
+                alert('Username or passwd was wrong!');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>top</title>
+    <style>
+        .go-top{
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            right: 10px;
+            bottom: 10px;
+
+
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 2048px">
+        <div style="background-color: #7cbe56;height: 500px">这里是顶部</div>
+        <div class="go-top hide">
+
+            <img src="top.jpg" alt="返回顶部" onclick="GoTop();"/>
+        </div>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        window.onscroll = function(){
+            var currentTop = $(window).scrollTop();
+            if (currentTop>100){
+                $('.go-top').removeClass('hide');
+            }else {
+                $('.go-top').addClass('hide');
+            }
+        };
+        function GoTop(){
+            $(window).scrollTop(0);
+        }
+
+    </script>
+</body>
+</html>

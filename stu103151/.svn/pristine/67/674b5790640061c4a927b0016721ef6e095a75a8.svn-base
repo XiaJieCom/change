@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人注册</title>
+    <link href="./image/favicon.ico" rel="shortcut icon">
+    <style>
+        form{
+            width: 380px;
+            height: 460px;
+            margin-left: 34%;
+            /*border: 1px solid #000;*/
+
+        }
+        .submit{
+            float: right;
+            width: 380px;
+            height: 35px;
+            background-color: #e94609;
+        }
+        input{
+            height: 30px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <form action="http://10.0.4.42:8000/django_form/" enctype="multipart/form-data" method="post">
+            <p>
+                <label>用 户  名</label>
+                <!--<input type="text" name="username"  maxlength="20" placeholder="您的账户名和登录名"  />-->
+
+                <input type="text" name="username" placeholder="Username" />
+            </p>
+            <p>设置密码 <input type="password" name="passwd"/></p>
+            <p>确认密码 <input type="password" name="passwd"/></p>
+            <hr/>
+                <p>手机验证     <input type="text" name="celphone"/></p>
+                <p>验 证 码     <input type="text" name="checkcode"/></p>
+            <hr/>
+             <input class="submit" type="submit" value="立即注册"/>
+        </form>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主机管理</title>
+    <style>
+        input{
+            margin: 5px 10px ;
+        }
+        th{
+            width: 300px;
+        }
+        .hide{
+            display: none;
+        }
+        .form{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:200px;width: 400px;margin: 10px;float: left">
+        <div>
+               <table border="1" id="table1">
+                   <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>主机名</th>
+                            <th>IP</th>
+                            <th>端口</th>
+                            <th>更改</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                        <tr>
+                            <td >
+                                <a>1</a>
+                            </td>
+                            <td>SLB</td>
+                            <td class="ip" id="ip1">192.168.1.1</td>
+                            <td>80,443</td>
+                            <td>
+                                 <div  id="onclick" onclick="FuncRemove(this);">编辑</div>
+                            </td>
+                        </tr>
+                   </tbody>
+                   <tbody>
+                        <tr>
+                            <td>
+                               <a>2</a>
+                            </td>
+                            <td>web server</td>
+                            <td class="ip" id="ip2">192.168.1.2</td>
+                            <td>80,443</td>
+                            <td>
+                                  <div id="onclick" onclick="FuncRemove(this);">编辑</div>
+                            </td>
+                        </tr>
+                   </tbody>
+                   <tbody>
+                        <tr>
+                            <td>
+                                <a>3</a>
+                            </td>
+                            <td>db server</td>
+                            <td class="ip" id="ip3">192.168.1.3</td>
+                            <td>3306</td>
+                            <td>
+                                  <div id="onclick" onclick="FuncRemove(this);">编辑</div>
+                            </td>
+                        </tr>
+                   </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="hide" id="divHide" style="width: 400px;height: 200px;margin: 10px;float:left;background-color: #9E9C9C">
+        <form class="form">
+            <div >
+                主机名<input id="hosti" type="text" name="hostname" value=""/>
+            </div>
+            <div>
+                IP地址
+                <input id="ipi" type="text" name="ip" value=""/>
+            </div>
+            <div>
+                端口号
+                <input id="porti" type="text" name="port" value=""/>
+            </div>
+            <input type="submit" value="提交" onclick="FuncAdd(this);"/>
+            <input type="submit" value="取消" onclick="FuncAdd(this);"/>
+        </form>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        function FuncRemove(ths){
+            var host = $(ths).parent().siblings().eq(1).text();
+            var ip = $(ths).parent().siblings().eq(2).text();
+            var port = $(ths).parent().siblings().eq(3).text();
+            $("#divHide").removeClass('hide');
+            $("#hosti").val(host);
+            $("#ipi").val(ip);
+            $("#porti").val(port);
+        }
+        function FuncAdd(ths){
+            $("#divHide").addClass('hide');
+            var HostNew = $("#hosti").val();
+            //alert(HostNew);
+            var IpNew = $("#ipi").val();
+            var PortNew = $("#porti").val();
+
+            $(ths).parent().siblings().eq(1).text(HostNew);
+            $(ths).parent().siblings().eq(2).text(IpNew);
+            $(ths).parent().siblings().eq(3).text(PortNew);
+
+        }
+
+    </script>
+</body>
+</html>

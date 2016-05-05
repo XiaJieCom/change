@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="获取节目" onclick="SubmitData();"/>
+    <div id="container"></div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        function SubmitData(){
+            $.ajax({
+                url:"http://www.jxntv.cn/data/jmd-jxtv2.html?callback=list&_=1454376870403",
+                data:{},
+                type:'GET',
+                dataType:'jsonp',
+                jsonp:'callback',
+                jsonpCallback:'list',
+                success:function(arg){
+                    console.log(arg);
+                    var jsonArry = arg.data;
+                    $.each(jsonArry,function(k,v){
+                        var week = v.week;
+                        var temp = '<h1>' + week + '</h1>';
+                        $('#container').append(temp);
+                        var listArray = v.list;
+                        $.each(listArray,function(kk,vv){
+                            var link = vv.link;
+                            var name = vv.name;
+
+                            var  tempNew = "<a href='" + link + "'>" + name + "</a><br/>";
+                            $('#container').append(tempNew);
+                        })
+                    })
+                },
+                error:function(){}
+            })
+        }
+    </script>
+</body>
+</html>

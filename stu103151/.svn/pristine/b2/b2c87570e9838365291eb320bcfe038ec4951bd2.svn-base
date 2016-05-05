@@ -1,0 +1,79 @@
+body{
+     color:rgb(243,243,244);
+}
+#head{
+    height: 150px;
+    /*background-color: #7c7c7c;*/
+}
+#logo{
+    margin-top: 10px;
+    margin-left: 45%;
+    margin-bottom: 10px;
+}
+#content{
+    width: 500px;
+    height: 350px;
+    margin-left: 35%;
+    /*border:1px solid #000;*/
+}
+.label1{
+    background: url("image/banner-icon-user.png");
+    position: relative;
+    left: 8px;
+    top: 48px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    z-index: 999;
+    text-align: center;
+}
+.label2{
+    background: url("image/banner-icon-pwd.png");
+    position: relative;
+    left: 8px;
+    top: 48px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    z-index: 999;
+    text-align: center;
+}
+#form{
+    height: 500px;
+    margin-left: 14%;
+    margin-top: 10px;
+}
+#username{
+    width: 260px;
+    height: 25px ;
+    margin: 10px 0 10px 0;
+
+}
+#passwd{
+    width: 260px;
+    height: 25px ;
+    margin: 0 0 10px 0;
+
+}
+#form #login input{
+    width: 260px;
+    height: 30px;
+    background-color: #e94609;
+
+}
+.join{
+    margin-left: 50%;
+    background-color:#fff;
+    color:rgb(74, 179, 198);
+
+}
+
+/*input::-ms-input-placeholder{text-align: center;}*/
+/*input::-webkit-input-placeholder{text-align: center;}*/
+.hiden{
+    display: none;
+}
+.error{
+    font-size: 10px;
+    color: red;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主机管理</title>
+    <style>
+        input{
+            margin: 5px 10px ;
+        }
+        th{
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:300px;width: 400px;margin: 50px;">
+        <div style="text-align: center;margin: 0;height: 30px;">
+            <input id="checkbox1" type="button" value="全选" onclick="AllBind(this);"/>
+            <input id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+            <input id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+            <input id="checkbox4" type="button" value="进入编辑模式" onclick="Vi(this)"/>
+            <input id="checkbox5" type="button" value="保存" onclick="Save(this)"/>
+        </div>
+        <div>
+               <table border="1">
+                   <thead>
+                        <tr>
+                            <th>选择</th>
+                            <th>主机名</th>
+                            <th>端口</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                        <tr style="width: 40px">
+                            <td>
+                                <input name="favor" type="checkbox" value="1"/>
+                            </td>
+                            <td>
+                                <input type="text" value="SLB" disabled/>
+                            </td>
+                            <td>
+                                <input type="text" value="80,443" disabled/>
+                            </td>
+                            <td>
+                                 <select>
+                                    <option label="在线">
+                                        <option value="outline">离线</option>
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                   </tbody>
+                   <tbody>
+                        <tr>
+                            <td>
+                                <input name="favor" type="checkbox" value="1"/>
+                            </td>
+                            <td>
+                                <input type="text" value="web server" disabled/>
+                            </td>
+                            <td>
+                                <input type="text" value="80,443" disabled/>
+                            </td>
+                            <td>
+                                 <select>
+                                    <option label="在线">
+                                        <option value="outline">离线</option>
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                   </tbody>
+                   <tbody>
+                        <tr>
+                            <td>
+                                 <input name="favor" type="checkbox" value="1"/>
+                            </td>
+                            <td>
+                                <input type="text" value="DB" disabled/>
+                            </td>
+                            <td>
+                                <input type="text" value="3306  " disabled/>
+                            </td>
+                            <td>
+                                 <select>
+                                    <option label="在线">
+                                        <option value="outline">离线</option>
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                   </tbody>
+
+
+            </table>
+        </div>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        function AllBind(ths){
+            $("input[type='checkbox']").attr("checked",true);
+        }
+        function OtherBind(ths){
+            $("input[type='checkbox']").each(function (){
+                    this.checked = !this.checked;
+                    })
+        }
+        function NoBind(ths){
+            $("input[type='checkbox']").removeAttr("checked");
+        }
+        function Vi(ths){
+            $("input[type='text']").removeAttr('disabled');
+        }
+        function Save(ths){
+            $("input[type='text']").attr('disabled',true);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <style>
+        .tab-box .box-menu{
+            background-color: #9a9a9a;
+            border: 1px solid #5cb85c;
+            height: 30px;
+        }
+        .tab-box .box-body{
+            border: 1px solid #5cb85c;
+            height: 300px;
+        }
+        .hide{
+            display: none;
+        }
+        .current{
+            background-color: #18a689;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-box">
+        <div class="box-menu">
+            <!--all menu-->
+            <a tx="c1" onclick="ChangeTab(this);">菜单一</a>
+            <a tx="c2" onclick="ChangeTab(this);">菜单二</a>
+            <a tx="c3" onclick="ChangeTab(this);">菜单三</a>
+        </div>
+        <div class="box-body">
+            <!--all content-->
+            <div id="c1">内容一</div>
+            <div id="c2" class="hide">内容二</div>
+            <div id="c3" class="hide">内容三</div>
+        </div>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        function ChangeTab(ths){
+//            当前标签增加current,其他移除
+            $(ths).addClass('current').siblings().removeClass('current');
+//            获取当前标签的属性'tx',根据'tx'获取关联的id
+            var contentId = $(ths).attr('tx');
+//            拼接获取的id
+            var temp = '#' + contentId;
+//            给获取的id设置移除隐藏,其他增加隐藏
+            $(temp).removeClass('hide').siblings().addClass('hide');
+        }
+    </script>
+</body>
+</html>

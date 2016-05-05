@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{#    <form action="/app01/db_handle/" method="post">#}
+{#        <p><input type="text" name="username" /></p>#}
+{#        <p><input type="text" name="password" /></p>#}
+{#        <p><input type="text" name="age" /></p>#}
+{#        <p><input type="submit" value="提交"/></p>#}
+{#    </form>#}
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>HostName</th>
+                <th>IP</th>
+                <th>Port</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in li %}
+                <tr>
+                    <td>{{ item.host }}</td>
+                    <td edit="true">{{ item.ip }}</td>
+                    <td>{{ item.port }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script src="/static/jquery-2.1.4.min.js"></script>
+</body>
+</html>

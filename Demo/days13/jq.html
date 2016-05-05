@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            margin: 5px 10px ;
+        }
+
+        .hide{
+            display: none;
+        }
+        .form{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" id="table1">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>主机名</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>更改</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td id="host">web</td>
+                <td id="ip">192.168.1.1</td>
+                <td id="port">80</td>
+                <td id="onclick" onclick="FuncRemove(this);">编辑</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="hide" id="divHide" style="width: 400px;height: 200px;margin: 10px;float:left;background-color: #9E9C9C">
+        <form class="form">
+            <div >
+                主机名<input id="hosti" type="text" name="hostname" value=""/>
+            </div>
+            <div>
+                IP地址
+                <input id="ipi" type="text" name="ip" value=""/>
+            </div>
+            <div>
+                端口号
+                <input id="porti" type="text" name="port" value=""/>
+            </div>
+            <input type="button" value="提交" onclick="FuncAdd(this);"/>
+            <input type="button" value="取消" onclick="FuncAdd(this);"/>
+        </form>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        function FuncRemove(ths){
+            //var host = $(ths).siblings().eq(1).text();
+            var host = $("#host").text();
+            $("#hosti").val(host);
+            $("#divHide").removeClass('hide');
+        }
+
+    </script>
+</body>
+</html>

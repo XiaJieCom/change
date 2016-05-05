@@ -1,0 +1,7 @@
+blog    http://www.cnblogs.com/xiajie/p/5445500.html
+作业一和作业二合并一块
+
+1  访问 index.html 的时候提示账号密码为 admin.admin
+如果输入正确会跳转到 manager.html(作业一)
+
+2 访问index.html,点击join us ,进入注册页面

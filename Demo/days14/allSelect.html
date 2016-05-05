@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+</head>
+<body>
+
+    <div>
+        <input type="button" value="全选" onclick="SelectAll();"/>
+        <input type="button" value="取消" onclick="ClearAll();"/>
+        <input type="button" value="反选" onclick="ReverseAll();"/>
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>123</td>
+                <td>123</td>
+            </tr>
+        </table>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        function SelectAll(){
+//            checked 设置默认是否选中
+//            先找到所有table下的chekcbox,然后使用prop给checked设置ture 或者false
+            $('table :checkbox').prop('checked',true);
+        }
+        function ClearAll(){
+            $('table :checkbox').prop('checked',false);
+        }
+        function ReverseAll(){
+//            $table :checkbox 找到所有的checkbox,注意加空格.each循环后面的所有函数
+            $('table :checkbox').each(function(){
+
+                var isChecked = $(this).prop('checked');
+                if (isChecked){
+                    $(this).prop('checked',false);
+                }else {
+                    $(this).prop('checked',true);
+                }
+            })
+        }
+    </script>
+</body>
+</html>
