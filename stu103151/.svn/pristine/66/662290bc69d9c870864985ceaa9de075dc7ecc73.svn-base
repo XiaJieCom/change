@@ -1,0 +1,33 @@
+.logo{
+  margin-top: 18px;
+  margin-left: 48%;
+}
+.form{
+  margin-top: 30px;
+  margin-left: 41%;
+  font-size: 14px;
+  /*border: 1px solid #e5e6e7;*/
+  width: 300px;
+}
+.form input{
+  width: 300px;
+
+}
+.info{
+  width: 300px;
+  height: 34px;
+
+}
+
+
+.copyright{
+  /*position: fixed;*/
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+table{
+  width: 500px;
+  /*margin-left: 50%;*/
+  margin: 10px;
+}

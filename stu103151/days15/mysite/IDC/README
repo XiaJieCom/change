@@ -1,0 +1,62 @@
+blog    http://www.cnblogs.com/xiajie/p/5464963.html
+目录结构
+.
+├── IDC
+│   ├── README
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   ├── models.py
+│   ├── static
+│   │   ├── css
+│   │   │   ├── bootstrap.css
+│   │   │   ├── buttons.css
+│   │   │   ├── cs.css
+│   │   │   └── flat-ui.css
+│   │   ├── img
+│   │   │   ├── bg.jpg
+│   │   │   ├── ico.png
+│   │   │   └── logo.png
+│   │   └── js
+│   │       ├── edit_row.js
+│   │       └── jquery-2.1.4.min.js
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── db.sqlite3
+├── manage.py
+├── moniter
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   │   ├── __init__.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── mysite
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── templates
+    ├── ecs.html
+    └── login.html
+
+访问流程:
+
+1 http://127.0.0.1:8000/cmdb/
+访问该页面提示输入用户名和密码,如果错误仍会显示当前页面
+
+执行过程
+    访问该地址时,相当于访问  /cmdb/login/ 展示出login.html;
+    输入信息后,/cmdb/check/ 进行登录验证,如果成功返回 ecs.html.
+
+2 登录成功后跳转到http://127.0.0.1:8000/cmdb/check/
+
+执行过程
+    提交表单交给/cmdb/db_handle/处理
+    根据提示信息输入,点击提交,记录添加到数据库并展示在表格中

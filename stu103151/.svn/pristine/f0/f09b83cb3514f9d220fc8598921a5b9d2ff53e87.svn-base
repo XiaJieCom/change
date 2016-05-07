@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/cs.css">
+    <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/flat-ui.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="icon" href="/static/img/ico.png" type="image/x-icon" />
+
+</head>
+<body>
+    <div style="text-align: left;margin: 10px;height: 30px;">
+            <input id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+            <input id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+            <input id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+{#            <input id="checkbox4" type="button" value="进入编辑模式" onclick="Vi(this)"/>#}
+{#            <input id="checkbox5" type="button" value="保存" onclick="FuncRemove(this)"/>#}
+{#            <input type="button" value="添加" onclick="Add(this)"/>#}
+    </div>
+    <form action="/cmdb/db_handle/" method="post">
+        <a>host</a>
+        <input type="text" name="host" />
+        <a>ip</a>
+        <input type="text" name="ip" />
+        <a>port</a>
+        <input type="text" name="port" />
+        <a>status</a>
+        <input type="text" name="status" />
+        <input type="submit" value="add"/>
+    </form>
+{#    <form action="/cmdb/del/" method="post">#}
+{##}
+{#        <input type="submit" value="del" />#}
+{#    </form>#}
+
+    <table border="1" >
+        <thead>
+            <tr>
+                <th>Host</th>
+                <th>IP</th>
+                <th>Port</th>
+                <th>Online</th>
+                <th>choice</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in li %}
+                <tr>
+
+                    <td>{{ item.host }}</td>
+                    <td>{{ item.ip }}</td>
+                    <td>{{ item.port }}</td>
+                    <td>{{ item.status }}</td>
+                    <td>
+                        <input name="favor" type="checkbox" value="1"/>
+                    </td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+    <script>
+        function AllBind(ths){
+            $("input[type='checkbox']").attr("checked",true);
+        }
+        function SelectAll(){
+//            checked 设置默认是否选中
+//            先找到所有table下的chekcbox,然后使用prop给checked设置ture 或者false
+            $('table :checkbox').prop('checked',true);
+        }
+        function OtherBind(ths){
+            $("input[type='checkbox']").each(function (){
+                    this.checked = !this.checked;
+                    })
+        }
+        function NoBind(ths){
+            $("input[type='checkbox']").removeAttr("checked");
+        }
+        function Vi(ths){
+            $("input[type='text']").removeAttr('disabled');
+        }
+        function Save(ths){
+            $("input[type='text']").attr('disabled',true);
+        }
+        function Del(ths){
+            $("input[type='checkbox']").removeData();
+        }
+
+    </script>
+
+</body>
+</html>

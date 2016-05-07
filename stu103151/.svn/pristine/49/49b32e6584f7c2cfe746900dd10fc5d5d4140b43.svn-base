@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECS</title>
+    <link rel="stylesheet" href="/static/css/cs.css">
+    <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/flat-ui.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="icon" href="/static/img/ico.png" type="image/x-icon" />
+</head>
+<body>
+    <div>
+{#        head#}
+        <img class="logo" src="/static/img/logo.png">
+    </div>
+    <div>
+{#        content#}
+        <form class="form" action="/cmdb/check/" method="post">
+            <p>
+                <input class="info" type="text" name="username"  placeholder="UserName"/>
+            </p>
+            <p>
+                <input class="info" type="password" name="password" placeholder="Passwd" />
+            </p>
+            <a style="margin: 3px 50px 3px">username:tom    passwd:cat</a>
+
+            <p>
+                <input  type="submit" class="button button-glow button-rounded button-raised button-primary"  value="login"/>
+            </p>
+        </form>
+
+    </div>
+    <div>
+{#        footer#}
+        <p class="copyright"> <small><b>Copyright</b> rabbit.org Organization © 2013-2016</small> </p>
+    </div>
+
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+</body>
+</html>
+
