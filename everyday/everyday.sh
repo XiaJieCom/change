@@ -1,48 +1,6 @@
-周期	工作(甄诚)	工作（夏杰）
-天	检查nagios/smokeping 是否报警，并及时处理	
-	检查nagios/smokeping 是否报警，并及时处理
-		
-周	周一对存储进行检查（包括系统信息，硬盘温度，硬盘状态等）
-	周四对存储进行检查（包括系统信息，硬盘温度，硬盘状态等）
-	检查svn服务器备份情况，内网数据库备份检查	检查备份到79的数据进行，查看脚本执行情况，是否备份完全。兼顾外网数据库备份检查
-		
-月	RIAD卡信息进行检查、cpu温度查看	检查首都在线和广州电信云主机计划任务执行情况
-	检查内网及IDC服务器安全日志	检查首都在线和广州电信云主机服务器安全日志
-	检查内网及IDC计划任务执行情况	
-		
-三月	更换润乾报表的授权	
-	服务器脚本进行备份	
-	服务器的配置文件进行备份（包括httpd，nginx，keepalived，nagios）	
-		
-年	更换一次视频会议的授权(6月1号)	
-
-对应服务器ip	服务器IQN	大小	描述
-iscsi名称	对应服务器ip	服务器IQN	大小	描述
-backup (iqn.2004-04.com.qnap:ts-669pro:iscsi.backup.bbee29)	192.168.100.110	iqn.1994-05.com.redhat:3cc77d768fad	500G	SVN备份以及、模型备份
-110 svn (iqn.2004-04.com.qnap:ts-669pro:iscsi.backup110.bbee29)	192.168.100.110	iqn.1994-05.com.redhat:cee4bbc4a6d8	500G	原备份空间不足，新增加SVN备份以及、模型备份空间
-database8 (iqn.2004-04.com.qnap:ts-669pro:iscsi.database8.bbee29)	192.168.100.8	iqn.1991-05.com.microsoft:sqlserver.ndtech.com.cn	200G	sql server 备份
-devback (iqn.2004-04.com.qnap:ts-669pro:iscsi.devback1.bbee29)	192.168.100.79	iqn.1994-05.com.redhat:7cc82756a174	500G	idc60 更新时备份数据备份
-dbbak (iqn.2004-04.com.qnap:ts-669pro:iscsi.dbbak.bbee29)	192.168.100.79	iqn.1994-05.com.redhat:3b282f5b56a5	500G	idc37 历史数据备份
-ftp (iqn.2004-04.com.qnap:ts-669pro:iscsi.ftp.bbee29)	192.168.100.78	iqn.1994-05.com.redhat:8fd8148b3f68	500G	公司ftp目录
-samba (iqn.2004-04.com.qnap:ts-669pro:iscsi.samba.bbee29)	192.168.100.78	iqn.1994-05.com.redhat:8fd8148b3f68	1024G	公司samba目录
-develop (iqn.2004-04.com.qnap:ts-669pro:iscsi.develop.bbee29)	192.168.100.78	iqn.1994-05.com.redhat:8fd8148b3f68	500G	张礼南samba下目录
-vm (iqn.2004-04.com.qnap:ts-669pro:iscsi.vm.bbee29)	192.168.100.69	iqn.1994-05.com.redhat:28b8cb1286eb	500G	虚拟机数据分区
-testbackup (iqn.2004-04.com.qnap:ts-669pro:iscsi.testbackup.bbee29)	192.168.100.167	iqn.1994-05.com.redhat:638d45bc1f46	500G	测试部-亓颖备份目录
-testbackup (iqn.2004-04.com.qnap:ts-669pro:iscsi.testbackup.bbee29)	192.168.100.168	iqn.1994-05.com.redhat:638d45bc1f46	500G	备份168数据库计划任务生成的文件
-
-
-
-HU7246
-
-
 http://blog.csdn.net/zdwzzu2006/article/details/7713596
 netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
 
-视讯账号
-
-10200001260
-
-1
 
 0、开启web服务
 
@@ -62,7 +20,6 @@ useradd -M -s /sbin/nologin hi
 5、perl 已安装模块查看
 perldoc -t perllocal |grep Module
 
-6、Linux端口范围 0-65535（2^16）
 
 7、重新挂载磁盘时，遇到 device is  busy
  umount -l /dev/samba
