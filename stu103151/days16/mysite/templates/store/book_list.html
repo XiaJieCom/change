@@ -1,0 +1,24 @@
+{% extends 'store/basic.html' %}
+{% block content %}
+
+     <table class="table table-striped" id="booklist">
+        <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>name</th>
+                    <th>publication_date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in li %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td id="name">{{ item.name }}</td>
+                        <td>{{ item.pulication_date }}</td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+     </table>
+
+{% endblock %}

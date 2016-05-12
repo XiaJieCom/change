@@ -1,0 +1,100 @@
+{% extends 'store/basic.html' %}
+{% block content %}
+    <div>
+        <input class="button" id="btnshow" type="button" value="Add" onclick="showdiv();"/>
+        <input class="button" id="btnshow" type="button" value="Del" onclick="showdiv();"/>
+        <div id="bg">
+{#            这里是编辑信息#}
+        </div>
+        <div id="show">
+
+            <div id="divHide" >
+                <form class="form" action="/store/author_edit/" method="post">
+                    <div >
+                        First Name<input id="hosti" type="text" name="first_name" value="" required="length[6~50]"/>
+                    </div>
+                    <div>
+                        Last Name<input id="ipi" type="text" name="last_name" value="" required="length[6~50]"/>
+                    </div>
+
+                    <input type="submit" value="提交" onclick="FuncAdd(this);"/>
+                    <input id="btnclose" type="button" value="取消" onclick="hidediv();"/>
+                </form>
+            </div>
+
+        </div>
+        <input class="button" id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+        <input class="button" id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+        <input class="button" id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+        <input class="button" id="checkbox4" type="button" value="进入编辑模式" onclick="Vi(this)"/>
+        <input class="button" id="checkbox5" type="button" value="保存" onclick="Save(this)"/>
+    </div>
+
+     <table class="table"  >
+        <thead>
+                <tr>
+                    <th>first_name</th>
+                    <th>last_name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in li %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.first_name }}</td>
+                        <td>{{ item.last_name }}</td>
+                        <td><input id="choice" type="checkbox" onclick="Choice(this)"/></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+     </table>
+    <script>
+
+        function AllBind(ths){
+            $("input[type='checkbox']").attr("checked",true);
+        }
+        function SelectAll(){
+//            checked 设置默认是否选中
+//            先找到所有table下的chekcbox,然后使用prop给checked设置ture 或者false
+            $('table :checkbox').prop('checked',true);
+        }
+        function OtherBind(ths){
+            $("input[type='checkbox']").each(function (){
+                    this.checked = !this.checked;
+                    })
+        }
+        function NoBind(ths){
+            $("input[type='checkbox']").removeAttr("checked");
+        }
+        function Vi(ths){
+            $("input[type='text']").removeAttr('disabled');
+        }
+        function Save(ths){
+            $("input[type='text']").attr('disabled',true);
+        }
+        function FuncRemove(ths){
+{#            var host = $(ths).parent().siblings().eq(1).text();#}
+{#            var ip = $(ths).parent().siblings().eq(2).text();#}
+{#            var port = $(ths).parent().siblings().eq(3).text();#}
+            $("#divHide").removeClass('hide');
+{#            $("#hosti").val(host);#}
+{#            $("#ipi").val(ip);#}
+{#            $("#porti").val(port);#}
+
+        }
+        function showdiv() {
+            document.getElementById("bg").style.display ="block";
+            document.getElementById("show").style.display ="block";
+        }
+        function hidediv() {
+            document.getElementById("bg").style.display ='none';
+            document.getElementById("show").style.display ='none';
+        }
+        function Choice(ths){
+            var tmp = $('#choice').siblings.first.value();
+            console.log(tmp);
+            alert(tmp);
+
+        }
+    </script>
+{% endblock %}

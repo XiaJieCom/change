@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/cs.css">
+    <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/flat-ui.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="icon" href="/static/img/ico.png" type="image/x-icon" />
+    <style>
+        .title{
+            color: white;
+            height: 50px;
+            line-height: 50px;
+        }
+        .menu{
+            float: left;width: 30%;height: 500px;
+        }
+        .menu_body{
+            color: #9aa4af;
+            margin-left: 10px;
+        }
+        .copyright{
+            width:200px;height:50px;bottom:0;position:absolute;color: white;font-size: 15px;text-align: center;
+        }
+        .logo{
+            width: 80px;
+            height: 80px;
+            margin: 20px 0 20px 40px;
+        }
+        .nav-top{
+            height: 120px;
+            background-color: #9aa4af;
+        }
+    </style>
+
+</head>
+<body class="gray-bg">
+    <div>
+        <div class="col-md-2" style="background-color: rgb(35,48,63);height: 682px" >
+            <div>
+                <img src="/static/img/h.png" class="img-rounded logo">
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <div class="title" onclick="Func_hide(this);">CMDB</div>
+                    <div class="menu_body ">
+                        <ul class="nav nav-pills">
+                          <li role="presentation"><a href="#">booklist</a></li>
+                          <li role="presentation"><a href="#">authors</a></li>
+                          <li role="presentation"><a href="#">publishers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title" onclick="Func_hide(this);">Moniter</div>
+                    <div class="menu_body  hide">
+                        <ul class="nav nav-pills">
+                          <li role="presentation"><a href="#">booklist</a></li>
+                          <li role="presentation"><a href="#">authors</a></li>
+                          <li role="presentation"><a href="#">publishers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title" onclick="Func_hide(this);">Store</div>
+                    <div class="menu_body hide">
+                        <ul class="nav nav-pills">
+                          <li role="presentation"><a href="/store/books ">booklist</a></li>
+                          <li role="presentation"><a href="/store/authors" >authors</a></li>
+                          <li role="presentation"><a href="/store/publishers" >publishers</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <div class="nav-top">
+{#                导航栏#}
+            </div>
+            <div id="con">
+
+            </div>
+            {% block content %}
+
+            {% endblock %}
+        </div>
+
+        <div>
+            <p class="copyright"> <small><b>Copyright</b> rabbit.org Organization © 2013-2016</small> </p>
+        </div>
+        
+    </div>
+
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+
+    <script>
+        {% comment %}隐藏标签{% endcomment %}
+        function Func_hide(ths){
+            $(ths).next().removeClass('hide');
+            $(ths).parent().siblings().find('.menu_body').addClass('hide');
+        }
+{#        $(function(){#}
+{#            $('#booklist').click(function(){#}
+{#                $('#con').html('');#}
+{#                $.ajax({#}
+{#                    type:'POST',#}
+{#                    url:'store/books',#}
+{#                    cache:false,#}
+{#                    data:#}
+{#                })#}
+{#            })#}
+{#        })#}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'store/basic.html' %}
+{% block content %}
+     <table  class="table" >
+        <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>name</th>
+                    <th>address</th>
+                    <th>city</th>
+                    <th>state_province</th>
+                    <th>country</th>
+                    <th>website</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in li %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.address }}</td>
+                        <td>{{ item.city }}</td>
+                        <td>{{ item.state_province }}</td>
+                        <td>{{ item.country }}</td>
+                        <td>{{ item.website }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+     </table>
+
+{% endblock %}
