@@ -1,0 +1,39 @@
+{% extends 'crm/lunch.html' %}
+{% load customer_tag %}
+{% block page-content-head %}
+    详细信息
+{% endblock %}
+{% block page-content %}
+    <form  class="form-horizontal"  method="post"  style="padding: 50px 0  50px 0  ">{% csrf_token %}
+    {% block page-detail %}
+        {% for field in model_form %}
+
+            <div class="form-group">
+                {% if field.field.required %}
+                    <label  class="col-sm-2 control-label text-left">*{{ field.label }}</label>
+                {% else %}
+                    <label style="font-weight: normal" class="col-sm-2 control-label text-left">{{ field.label }}</label>
+                {% endif %}
+                <div class="col-sm-9">
+                    {{ field }}
+                    {% if field.errors %}
+                        <ul>
+                            {% for error in field.errors %}
+                                <li style="color:red">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+        {% endblock %}
+        <div class="col-sm-7"  >
+            <button class="btn btn-warning pull-right" type="button" style="color: #fff">
+                <a href="{{ base_url }}">Cancel</a>
+            </button>
+            <input class="btn btn-success pull-right" type="submit" value="Save" style="margin-right: 10px;width: 80px">
+
+        </div>
+    </form>
+
+{% endblock %}

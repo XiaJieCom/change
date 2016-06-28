@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block menu %}
+        <ul>
+            <li style="display: inline-block">home</li>
+            <li style="display: inline-block">menu1</li>
+            <li style="display: inline-block">menu2</li>
+            <li style="display: inline-block">menu3</li>
+        </ul>
+
+    {% endblock %}
+    {% block content %}
+    <ul>
+        {% for user_obj in users %}
+            {% ifequal user_obj.username 'alex2' %}
+                <li style="background-color: #1abc9c">username:{{ user_obj.username }},name:{{ user_obj.name }}</li>
+            {% else %}
+                <li style="background-color: gold">username:{{ user_obj.username }},name:{{ user_obj.name }}</li>
+            {% endifequal %}
+        {% endfor %}
+    </ul>
+    {% endblock %}
+    <footer>copyright 2016</footer>
+</body>
+</html>
+

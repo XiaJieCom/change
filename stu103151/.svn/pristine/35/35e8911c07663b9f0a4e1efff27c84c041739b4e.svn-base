@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block page-container %}
+    <div class="chat-container">
+        <div class="left-contact-panel">
+            {#        contacts 联系人/群组#}
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs left-contacts" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#contact-tab" role="tab" data-toggle="tab">好友</a>
+                </li>
+                <li role="presentation">
+                    <a href="#group-tab" role="tab" data-toggle="tab">群组</a>
+                </li>
+                <li role="presentation">
+                    <a href="#last-tab" role="tab" data-toggle="tab">最近</a>
+                </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="contact-tab">
+                    <ul class="list-group">
+                        {% for friend in request.user.userprofile.friends.select_related %}
+                            <li contact-type="single" contact-id="{{ friend.id }}" onclick="OpenChatWindow(this)"
+                                class="list-group-item">
+                                <span style="background-color: orangered" class="badge  hide">0</span>
+                                <span class="contact-name"> {{ friend.name }} </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="group-tab">
+                    group
+                </div>
+                <div role="tabpanel" class="tab-pane" id="last-tab">
+                    last
+                </div>
+            </div>
+
+
+        </div>
+        <div class="right-chat-panel">
+            <div class="chat-box-title">
+                title
+            </div>
+            <div class="chat-box-window">
+                window
+            </div>
+            <div class="chat-box-emoj">
+                emoj
+            </div>
+            <div class="chat-box-msg-box form-control">
+                <textarea id="msg" placeholder="请输入内容"></textarea>
+                {#                <button class="btn btn-success">发送消息</button>#}
+            </div>
+        </div>
+        <div class="clear-both"></div>
+    </div>
+
+{% endblock %}
+
+
+{% block bottom-js %}
+    <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+        console.log(csrftoken)
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+        $(document).ready(function () {
+            $.ajaxSetup({
+                beforeSend: function (xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            });
+
+            GetNewMsgs();//开始去取消息
+            $("#navbar a[href='{{ request.path }}']").parent().addClass("active");
+            $("body").delegate("textarea", "keydown", function (e) {
+                if (e.which == 13) {//Enter key down
+                    //监听回车键
+                    var msg_text = $("textarea").val();
+                    //初始化msg_text,如果长度大于0,说明输入了信息,发送信息
+                    if ($.trim(msg_text).length > 0) {
+                        console.log(msg_text);
+                        SendMsg(msg_text);
+                    }
+                    //no wait the send_msg's call confirm msg
+                    AddSentMsgIntoBox(msg_text);
+                    $("textarea").val('');
+                }
+            });
+        });//end doc ready
+        function GetCsrfToken() {
+            return $("input[name='csrfmiddlewaretoken']").val();
+        }
+        function AddRecvMsgToChatBox(msg_item) {
+            console.log('msg_ele--->', msg_item);
+            var msg_ele = "<div class='msg-item-recv'>" +
+                    "<p>" + msg_item.from_name +
+                    " &nbsp;&nbsp;" + msg_item['timestamp'] + "</p>" +
+                    "<p>" + msg_item.msg + "</p>" +
+                    "</div>";
+
+            $(".chat-box-window").append(msg_ele);
+
+            $('.chat-box-window').animate({
+                        scrollTop: $('.chat-box-window')[0].scrollHeight
+                    }, 500
+            );//e
+
+        }
+        function AddSentMsgIntoBox(msg_text) {
+            //发送当前用户,时间,和消息
+            var new_msg_ele = "<div class='msg-item'>" +
+                    "<span>" + "{{ request.user.userprofile.name }}" + "</span>" + "&nbsp&nbsp" +
+                    "<span>" + new Date().toLocaleString() + "</span>" +
+                    "<div class='msg-text'>" + msg_text + "</div>" +
+                    "</div>"
+            $(".chat-box-window").append(new_msg_ele);
+            $('.chat-box-window').animate({
+                scrollTop: $('.chat-box-window')[0].scrollHeight
+            }, 500);
+
+        }
+
+        function OpenChatWindow(ele) {
+            //初始化聊天窗口
+
+            //console.log($(ele));
+            //点击当前联系人,移除其他联系人active
+            $(ele).addClass("active");
+            $(ele).siblings().removeClass("active");
+
+            //获取当前联系人ID/name/类型
+            var contact_id = $(ele).attr("contact-id");
+            var contact_name = $(ele).find(".contact-name").text();
+            var contact_type = $(ele).attr("contact-type");
+            //拼接字符串显示在会话框,正在和xxx聊天
+            var chat_box_title_content = "正在跟" + contact_name + "聊天";
+            $(".chat-box-title").html(chat_box_title_content);
+
+            $(".chat-box-title").attr("contact-id", contact_id);
+            $(".chat-box-title").attr("contact-type", contact_type);
+        }
+        $("#contact-tab-list a").click(function)
+        function SendMsg(msg_text) {
+            var contact_type = $(".chat-box-title").attr("contact-type");
+            var contact_id = $(".chat-box-title").attr("contact-id");
+            console.log("contact-id " + contact_id);
+            if (contact_type && contact_id) {
+                var msg_item = {
+                    'from': "{{ request.user.userprofile.id }}",
+                    'from_name': "{{ request.user.userprofile.name }}",
+                    'to': contact_id,
+                    'type': contact_type,
+                    'msg': msg_text
+                };
+
+                $.post("{% url 'send_msg' %}", {'data': JSON.stringify(msg_item)}, function (callback) {
+                    {#                    console.log(callback);#}
+                    {#                    console.log('ok');#}
+                });//end post
+            }//end if
+
+
+        }
+        function GetNewMsgs() {
+            console.log('-----getting new msgs-------');
+            $.get("{% url 'get_new_msgs' %}", function (callback) {
+                console.log("callback---->:", callback);
+                callback = JSON.parse(callback);
+                var current_id = $(".chat-box-title").attr("contact-id");
+                var current_type = $(".chat-box-title").attr("contact-type");
+                console.log('这里是ID 和 type', current_id, current_type);
+                $.each(callback, function (index, msg_item) {
+                    console.log(msg_item.type, current_type);
+                    if (msg_item.type == current_type) {
+                        if (msg_item.from == current_id) {
+
+                            AddRecvMsgToChatBox(msg_item);
+                            console.log('ok');
+{#                        }//end if(msg_item.from == current_open_session_id)#}
+{#                        else {#}
+{#                            console.log('--------->这里是验证消息数目');#}
+{#                            var msg_conut_ele = $("#list-group-item[contact-id='" + msg_item.from + "'] span");#}
+{#                            console.log(msg_conut_ele);#}
+{#                            msg_conut_ele.text(parseInt(msg_conut_ele.text()) + 1);#}
+{#                            console.log('sssss', msg_conut_ele);#}
+{#                            msg_conut_ele.removeClass('hide');#}
+                        };
+                    };//end if msg_item.contact_type == current_open_session_type
+                });//end each
+
+                console.log("----run again....");
+                GetNewMsgs();
+            });//end post
+        }
+
+
+    </script>
+{% endblock %}

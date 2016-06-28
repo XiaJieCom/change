@@ -1,0 +1,39 @@
+{% extends 'crm/basic.html' %}
+
+{% block content %}
+    <style>
+        .form-ele{
+            padding: 20px;
+        }
+    </style>
+
+{#    <form action="" method="post">{% csrf_token %}#}
+{#        <div class="form-control" class="hidden">#}
+{#            {{ book_form }}#}
+{#            {% for ele in Course_form %}#}
+{#                <div class="form-ele">{{ ele.name }}{{ ele }}{{ ele.errors }}</div>#}
+{#            {% endfor %}#}
+{#            </div>#}
+{#        <input type="submit" value="create">#}
+{#    </form>#}
+
+    <table class="table"  >
+            <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>第几节</th>
+                        <th>日期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in li %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.day_num }}</td>
+                            <td>{{ item.date }}</td>
+                            <td><input name="choice" type="checkbox"  value='{{ item.id }}'/></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+         </table>
+{% endblock %}

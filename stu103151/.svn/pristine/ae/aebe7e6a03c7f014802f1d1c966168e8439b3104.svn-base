@@ -1,0 +1,10 @@
+{% extends 'moniter/t2.html' %}
+
+{% block menu %}
+    <h1>This is t3</h1>
+{% endblock %}
+
+{% block father-content %}
+    <h2>this is t3 </h2>
+
+{% endblock %}

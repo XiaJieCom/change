@@ -1,0 +1,41 @@
+blog：http://www.cnblogs.com/xiajie/p/5488431.html
+
+
+主要项目为 BBS
+
+
+1 基本用户登录/注销
+2 文章内容展示/发帖/图片上传
+3 评论
+
+
+访问说明:
+
+
+http://127.0.0.1:8000/bbs         默认用户名和密码    jack:1234qwer
+
+登录后顶部为导航栏,默认显示BBS各个版块,右上角为当前登录用户
+
+
+目录结构
+├── admin.py
+├── apps.py
+├── forms.py                modelform
+├── migrations
+├── models.py
+├── tests.py
+├── urls.py
+└── views.py
+
+statics
+├── bootstrap
+├── imgs                图片上传目录
+└── plugin              插件目录
+
+templates
+├── article_detail.html 文章内容
+├── index.html          首页
+├── new_article.html    发帖
+├── base.html           基本模板
+└── login.html          登录
+

@@ -1,0 +1,192 @@
+{% extends 'crm/basic.html' %}
+
+{% block content %}
+
+
+    <form action="/crm/Course_del/" method="post">
+        <div class="nav-divider">
+            <input class="button" id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+            <input class="button" id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+            <input class="button" id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+            <button class="button" type="submit" value="del" style="float: right">
+              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+            <button class="button" type="button"  data-toggle="modal" data-target="#myModal" style="float: right">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Button trigger modal -->
+
+
+
+        <table class="table table-hover table-striped table-condensed "  id="tb1" >
+            <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>ID</th>
+                        <th>课程名称</th>
+                        <th>面授班价格</th>
+                        <th>网络班价格</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in li %}
+                        <tr>
+                            <td><input name="choice" id="ck" type="checkbox"  value='{{ item.id }}' onclick="Edit(this)"/></td>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.price }}</td>
+                            <td>{{ item.online_price }}</td>
+                            <td>{{ item.brief }}</td>
+                            <td>
+                                <button class="button" type="button"  data-toggle="modal" data-target="#EditModal" onclick="Edit(this)">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                </button>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                </tbody>
+         </table>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">添加记录</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="form-horizontal">
+                        <div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    课程名称:
+                                </label>
+                                <span>
+                                       {{ model_form.name }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    面授班价格:
+                                </label>
+                                <span>
+                                       {{ model_form.price }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    网络班价格:
+                                </label>
+                                <span>
+                                       {{ model_form.online_price }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;position: relative;bottom: 200px;">
+                                    备注:
+                                </label>
+                                <span >
+                                       {{ model_form.brief }}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">submit</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- EditModal-->
+    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">修改记录</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="/crm/Course_update/" method="post" class="form-horizontal">
+                        <div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    ID:
+                                </label>
+                                <span id="edit_ID">
+
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    课程名称:
+                                </label>
+                                <span id="edit_name">
+                                    {{ model_form.name }}
+
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    面授班价格:
+                                </label>
+                                <span id="edit_price">
+                                       {{ model_form.price }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    网络班价格:
+                                </label>
+                                <span id="edit_online_price">
+                                       {{ model_form.online_price }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;position: relative;bottom: 200px;">
+                                    备注:
+                                </label>
+                                <span id="edit_brief">
+                                       {{ model_form.brief }}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">submit</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+         function Edit(ths){
+             var id = $(ths).parent().siblings('td:eq(1)').text();
+             console.log(id);
+             var name = $(ths).parent().siblings('td:eq(2)').text();
+             console.log(name);
+             var price = $(ths).parent().siblings('td:eq(3)').text();
+             console.log(price);
+             var online_price = $(ths).parent().siblings('td:eq(4)').text();
+             console.log(online_price);
+             var brief = $(ths).parent().siblings('td:eq(5)').text();
+             console.log(brief);
+             $("#edit_ID").html('<input id="id_star_date" name="id" type="text" >').children('input').val(id);
+             $("#edit_name").children('input').val(name);
+             $("#edit_price").children('input').val(price);
+             $("#edit_online_price").children('input').val(online_price);
+             $("#edit_brief").children('textarea').val(brief);
+
+        }
+
+    </script>
+{% endblock %}

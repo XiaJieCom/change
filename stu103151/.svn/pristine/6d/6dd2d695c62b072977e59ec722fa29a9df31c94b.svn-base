@@ -1,0 +1,62 @@
+{% extends 'store/basic.html' %}
+{% block content %}
+    <div>
+        <input class="button" id="btnshow" type="button" value="Add" onclick="showdiv();"/>
+        <div id="bg">
+{#            这里是编辑信息#}
+        </div>
+        <div id="show" style="height: 500px">
+
+            <div id="divHide" >
+                <form method="post" action="/store/book_edit/">
+                    Name:<input type="text" name="name">
+                    <p>
+                    <select name="publisher_id">
+                        {% for publisher in publishers %}
+                        <option value="{{ publisher.id }}">{{ publisher.name }}</option>
+                        {% endfor %}
+                    </select>
+                    </p>
+                    <p>
+                    <select name="author_ids" multiple="multiple">
+                        {% for author in authors %}
+                            <option value="{{ author.id }}">{{ author.first_name }} {{author.last_name  }}</option>
+                        {% endfor %}
+                    </select>
+                    </p>
+
+                    <input type="submit" value="create">
+                </form>
+            </div>
+
+        </div>
+        <input class="button" id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+        <input class="button" id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+        <input class="button" id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+    </div>
+    <form action="/store/book_del/" method="post">
+         <table class="table"  >
+            <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>name</th>
+                        <th>publisher_id</th>
+                        <th>publication_date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in li %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.publisher_id }}</td>
+                            <td>{{ item.pulication_date }}</td>
+                            <td><input name="choice" type="checkbox"  value='{{ item.id }}'/></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+         </table>
+        <input type="submit" value="del"/>
+    </form>
+
+{% endblock %}

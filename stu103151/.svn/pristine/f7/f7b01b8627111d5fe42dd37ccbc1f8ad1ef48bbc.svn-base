@@ -1,0 +1,236 @@
+{% extends 'crm/basic.html' %}
+
+{% block content %}
+
+
+    <form action="/crm/ClassList_del/" method="post">
+        <div class="nav-divider">
+            <input class="button" id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+            <input class="button" id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+            <input class="button" id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+            <button class="button" type="submit" value="del" style="float: right">
+              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+            <button class="button" type="button"  data-toggle="modal" data-target="#myModal" style="float: right">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Button trigger modal -->
+
+
+
+        <table class="table table-hover table-striped table-condensed "  id="tb1" >
+            <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>ID</th>
+                        <th>课程</th>
+                        <th>班级类型</th>
+                        <th>学期</th>
+                        <th>开学时间</th>
+                        <th>结业时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in li %}
+                        <tr>
+                            <td><input name="choice" id="ck" type="checkbox"  value='{{ item.id }}' onclick="Edit(this)"/></td>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item }}</td>
+                            <td>{{ item.course_type }}</td>
+                            <td>{{ item.semster }}</td>
+                            <td>{{ item.star_date |date:"Y-m-d"}}</td>
+                            <td>{{ item.gratute_date |date:"Y-m-d"}}</td>
+                            <td>{{ item.teachers }}</td>
+                            <td>
+                                <button class="button" type="button"  data-toggle="modal" data-target="#EditModal" onclick="Edit(this)">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                </button>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                </tbody>
+         </table>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">添加记录</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="form-horizontal">
+                        <div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    课程:
+                                </label>
+                                <select name="Course_id">
+                                    {% for li in Course_list %}
+                                        <option value="{{ li.id }}">{{ li.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    类型:
+                                </label>
+                                <span>
+                                       {{ model_form.course_type }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    学期:
+                                </label>
+                                <span>
+                                       {{ model_form.semster }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    开学日期:
+                                </label>
+                                <span>
+                                       {{ model_form.star_date}}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    结业日期:
+                                </label>
+                                <span >
+                                       {{ model_form.gratute_date }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    讲师:
+                                </label>
+                                <select name="teachers">
+                                    {{ teachers_list }}
+{#                                    {% for li in teachers_list %}#}
+{#                                        <option value="{{ li.id }}">{{ li.name }}</option>#}
+{#                                    {% endfor %}#}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">submit</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- EditModal-->
+    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">修改记录</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="/crm/ClassList_update/" method="post" class="form-horizontal">
+                        <div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    ID:
+                                </label>
+                                <span id="edit_ID">
+
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    课程:
+                                </label>
+                                <span id="edit_course_id">
+                                    {{ model_form.course_id }}
+
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    类型:
+                                </label>
+                                <span id="edit_course_type">
+                                    {{ model_form.course_type }}
+
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    学期:
+                                </label>
+                                <span id="edit_semster">
+                                       {{ model_form.semster }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    开学时间:
+                                </label>
+                                <span id="edit_star_date">
+                                       {{ model_form.star_date }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    结业时间:
+                                </label>
+                                <span id="edit_gratute_date">
+                                       {{ model_form.gratute_date }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    讲师:
+                                </label>
+                                <span id="edit_teachers">
+                                       {{ model_form.teachers }}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">submit</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+         function Edit(ths){
+             var id = $(ths).parent().siblings('td:eq(1)').text();
+             console.log(id);
+             var course_type = $(ths).parent().siblings('td:eq(3)').text();
+             console.log(course_type);
+             var course_id = $(ths).parent().siblings('td:eq(2)').text();
+             console.log(course_id);
+             var semster = $(ths).parent().siblings('td:eq(4)').text();
+             console.log(semster);
+             var star_date = $(ths).parent().siblings('td:eq(5)').text();
+             console.log(star_date);
+             var gratute_date = $(ths).parent().siblings('td:eq(6)').text();
+             console.log(gratute_date);
+             $("#edit_ID").html('<input id="id" name="id" type="text">').children('input').val(id);
+             $("#edit_course_type").children('input option').val(course_type);
+             $("#edit_course_id").text(course_id);
+             $("#edit_semster").children('input').val(semster);
+             $("#edit_star_date").children('input').val(star_date);
+             $("#edit_gratute_date").children('input').val(gratute_date);
+
+        }
+
+    </script>
+{% endblock %}

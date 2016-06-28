@@ -1,0 +1,12 @@
+{% extends 'crm/basic.html' %}
+{% block content %}
+<div>
+{% if request.user.is_authenticated %}
+<span>{{ request.user.userprofile.name }}</span>
+{% else %}
+<span>登陆/注册</span>
+{% endif %}
+</div>
+ {{ request.user.userprofile.name }}
+    {{ user }}
+{% endblock %}

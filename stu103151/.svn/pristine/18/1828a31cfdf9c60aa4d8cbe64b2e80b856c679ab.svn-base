@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人注册</title>
+    <link href="/img/favicon.ico" rel="shortcut icon">
+    <style>
+        form{
+            width: 380px;
+            height: 460px;
+            margin-left: 34%;
+            /*border: 1px solid #000;*/
+
+        }
+        .submit{
+            float: left;
+            width: 305px;
+            height: 35px;
+            background-color: #e94609;
+        }
+        input{
+            height: 30px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/store/reg/" enctype="multipart/form-data" method="post">
+            <p>
+                <input type="text" name="username" placeholder="Username" />
+            </p>
+            <p> <input type="password" name="passwd" placeholder="password"/></p>
+            <p> <input type="password" name="passwd" placeholder="password again"/></p>
+             <input class="submit" type="submit" value="Registry"/>
+        </form>
+    </div>
+
+
+</body>
+</html>

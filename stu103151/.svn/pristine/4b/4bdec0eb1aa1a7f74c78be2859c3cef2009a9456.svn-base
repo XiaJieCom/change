@@ -1,0 +1,120 @@
+{% extends 'crm/base_list.html' %}
+{% load customer_tag %}
+{% block list-head %}
+    班级列表
+{% endblock %}
+{% block list-form-del %}
+    <form action="/crm/class_del/" method="post">
+{% endblock %}
+{% block list-form-table %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th>选择</th>
+            <th>课程</th>
+            <th>学期</th>
+            <th>授课方式</th>
+            <th>开学日期</th>
+            <th>结业日期</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in class_list %}
+            <tr>
+                <td><input name="choice" id="ck" type="checkbox"  value='{{ item.id }}' /></td>
+                <td><a href="{% url 'class_detail' item.id  %}">{{ item.course }}</a></td>
+                <td>{{ item.semester }}</td>
+                <td>{{ item.get_course_type_display }}</td>
+                <td>{{ item.start_date }}</td>
+                <td>{{ item.graduate_date }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+</form>
+{% block list-form %}
+    <form action="" method="post" class="form-horizontal">
+        <div>
+            <div>
+                <label style="padding-right: 50px;width: 150px">
+                    课程:
+                </label>
+                <select name="course_id">
+                    {% for li in course_list %}
+                        <option value="{{ li.id }}">{{ li.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label style="padding-right: 50px;width: 150px">
+                    授课方式:
+                </label>
+                                <span>
+                                       {{ model_form.course_type }}
+                                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;width: 150px">
+                    学期:
+                </label>
+                                <span>
+                                       {{ model_form.semester }}
+                                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;width: 150px;">
+                    开学日期:
+                </label>
+                                <span>
+                                       {{ model_form.start_date}}
+                                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;width: 150px;">
+                    结业日期:
+                </label>
+                                <span >
+                                       {{ model_form.graduate_date }}
+                                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;width: 150px;">
+                    讲师:
+                </label>
+                <select name="teachers">
+                    {% for li in teachers_list %}
+                        <option value="{{ li.id }}">{{ li.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </form>
+{% endblock %}
+{% block pagination %}
+    <ul class="pagination" >
+        {% if class_list.has_previous %}
+            <li class="">
+                <a href="?page={{ class_list.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {% endif %}
+        {% for page_num in class_list.paginator.page_range %}
+            {% guess_page class_list.number page_num %}
+        {% endfor %}
+        {% if class_list.has_next %}
+            <li class="">
+                <a href="?page={{ class_list.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+{% endblock %}
+

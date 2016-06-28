@@ -1,0 +1,58 @@
+{% extends 'crm/lunch.html' %}
+{% load customer_tag %}
+{% block page-content-head %}
+    {% block list-head %}
+    {% endblock %}
+{% endblock %}
+{% block page-content %}
+    <div class="box-body">
+        {% block list-form-del %}
+            这里是删除的action
+        {% endblock %}
+            <div class="nav-divider">
+                <input class="btn bg-navy" id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+                <input class="btn bg-navy" id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+                <input class="btn bg-navy" id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+                <button class="btn bg-navy" type="submit" value="del" style="float: right;margin-right: 8px">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button class="btn  bg-navy" type="button"  data-toggle="modal" data-target="#myModal" style="float: right;margin-right: 5px">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+
+
+            {% block list-form-table %}
+                这里显示列表
+            {% endblock %}
+
+
+        </form>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabel">添加记录</h3>
+                    </div>
+                    <div class="modal-body">
+                        {% block list-form %}
+                            这里是添加功能的table
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination" style="margin-right: 300px" >
+            <nav >
+                <ul class="pagination" >
+                    {% block pagination %}
+                        这里是分页功能展示
+                    {% endblock %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% endblock %}

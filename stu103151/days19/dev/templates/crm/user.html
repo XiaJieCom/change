@@ -1,0 +1,88 @@
+{% extends 'crm/base_list.html' %}
+{% load customer_tag %}
+{% block list-head %}
+    讲师列表
+{% endblock %}
+{% block list-form-del %}
+    <form action="/crm/user_del/" method="post">
+{% endblock %}
+{% block list-form-table %}
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>选择</th>
+                    <th>姓名</th>
+                    <th>校区</th>
+                    <th>用户ID</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for item in user_list %}
+            <tr>
+                <td><input name="choice" id="ck" type="checkbox"  value='{{ item.id }}' /></td>
+                <td><a href="{% url 'user_detail' item.id  %}">{{ item.name }}</a></td>
+                <td>{{ item.school }}</td>
+                <td>{{ item.user }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
+</form>
+{% block list-form %}
+    <form action="" method="post" class="form-horizontal">
+        <div>
+            <div>
+                <label style="padding-right: 50px;width: 150px">
+                    姓名:
+                </label>
+                <span>
+                    {{ model_form.name }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;width: 150px">
+                    校区:
+                </label>
+                <span>
+                    {{ model_form.school_id }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;width: 150px">
+                    name:
+                </label>
+                <span>
+                    {{ model_form.name_id }}
+                </span>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </form>
+{% endblock %}
+{% block pagination %}
+    <ul class="pagination" >
+                {% if user_list.has_previous %}
+                    <li class="">
+                        <a href="?page={{ user_list.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% for page_num in user_list.paginator.page_range %}
+                    {% guess_page user_list.number page_num %}
+                {% endfor %}
+                {% if user_list.has_next %}
+                      <li class="">
+                        <a href="?page={{ user_list.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                {% endif %}
+            </ul>
+{% endblock %}
+

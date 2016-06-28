@@ -1,0 +1,38 @@
+blog：http://www.cnblogs.com/xiajie/p/5488431.html
+
+
+主要项目为 WebChat
+
+
+1 基本用户登录/注销
+2 显示好友列表/头像
+3 和好友直接发消息
+
+
+访问说明:
+
+
+http://127.0.0.1:8000/bbs 点击WebChat版块         默认用户名和密码    jack:1234qwer  kane:1234qwer
+
+
+
+
+目录结构基本和常规项目一致
+
+├── admin.py
+├── apps.py
+├── forms.py                modelform
+├── migrations
+├── models.py
+├── tests.py
+├── urls.py
+└── views.py
+
+
+templates
+├── login.html          登录
+├── base.html
+└── webchat
+    └── dashboard.html  聊天页面
+
+

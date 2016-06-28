@@ -1,0 +1,26 @@
+.signed{
+    background-color: greenyellow;
+}
+.unregistered{
+    background-color: darkgrey;
+}
+.graduated{
+    background-color: orange;
+}
+.drop-off{
+    background-color: beige;
+}
+
+
+.checked{
+    background-color: greenyellow;
+}
+.late{
+    background-color: darkgrey;
+}
+.noshow{
+    background-color: red;
+}
+.leave_early{
+    background-color: beige;
+}

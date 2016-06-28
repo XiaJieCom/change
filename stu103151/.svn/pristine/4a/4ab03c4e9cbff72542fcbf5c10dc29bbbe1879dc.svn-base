@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>store</title>
+    <link rel="stylesheet" href="/static/css/cs.css">
+    <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/flat-ui.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="icon" href="/static/img/ico.png" type="image/x-icon" />
+</head>
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen">
+        <div>
+            <img class="logo-name" src="/static/img/logo.png">
+        </div>
+
+        <form class="m-t " action="" method="post">
+            <div class="form-group">
+                <input type="text" name="username"  class="form-control" placeholder="UserName" required="length[6~50]"/>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Passwd" required="length[6~50]" />
+            </div>
+            <p>username:passwd | tom:cat</p>
+            <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+        </form>
+        <form class="join" action="/store/reg/">
+            <button type="submit" class="btn block  join">join us</button>
+        </form>
+
+
+        <div>
+            <p class="m-t"> <small><b>Copyright</b> rabbit.org Organization © 2013-2016</small> </p>
+        </div>
+    </div>
+
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+</body>
+</html>
+

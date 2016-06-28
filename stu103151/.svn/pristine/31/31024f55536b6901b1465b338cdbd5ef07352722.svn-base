@@ -1,0 +1,19 @@
+{% extends 'moniter/t1.html' %}
+
+{% block menu %}
+
+ <h1>
+    this is page1 menu
+ </h1>
+
+{% endblock %}
+
+{% block content %}
+
+<p style="background-color: #1abc9c">
+    This is t2
+</p>
+    {% block father-content %}
+        {% include 'moniter/register.html' %}
+    {% endblock %}
+{% endblock %}

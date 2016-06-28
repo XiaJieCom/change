@@ -1,0 +1,77 @@
+blog：http://www.cnblogs.com/xiajie/p/5488431.html
+
+
+主要项目为 store,其他部分可忽略
+
+功能实现: 类似书店管理后台系统
+
+1 基本登录/注册
+2 作者/出版社/书 等信息的编辑
+
+
+访问说明:
+
+
+登录  http://127.0.0.1:8000/store         默认用户名和密码    tom:cat
+注册  http://127.0.0.1:8000/store/reg/    点击首页join us
+        以上部分没有使用ajax进行信息对比,所以造成很多bug
+主页  http://127.0.0.1:8000/store/home
+
+登录后左侧为导航栏,默认显示store下的菜单,点击对应标签显示为对应信息
+
+以booklist为例,实现了增加/全选/反选/取消/删除等功能
+
+Add  全选  反选  取消
+ID	name	publisher_id	publication_date
+1	baidu 的一天	1	May 22, 2016
+2	Google的一天	3	May 22, 2016
+3	真好	1	May 22, 2016	del
+del
+
+
+目录结构
+
+store
+├── admin.py
+├── apps.py
+├── migrations
+│   ├── 0001_initial.py
+│   ├── __init__.py
+│   └── __pycache__
+│       ├── 0001_initial.cpython-35.pyc
+│       └── __init__.cpython-35.pyc
+├── models.py
+├── static
+│   ├── css
+│   │   ├── bootstrap.css
+│   │   ├── buttons.css
+│   │   ├── cs.css
+│   │   └── flat-ui.css
+│   ├── img
+│   │   ├── h.png
+│   │   ├── ico.png
+│   │   └── logo.png
+│   └── js
+│       ├── edit_row.js
+│       ├── jquery-1.8.2.min.js
+│       └── jquery-2.1.4.min.js
+├── tests.py
+├── urls.py
+└── views.py
+
+templates
+
+├── author_list.html            作者展示页面
+├── basic.html                  继承模板
+├── book_list.html              书籍展示页面
+├── login.html                  登录页面
+├── publisher_list.html         出版社展示页面
+├── registry.html               注册页面
+└── start.html                  起始页面（暂时没有加具体信息）
+
+
+目前存在问题:
+1   信息验证,没有使用ajax进行数据对比,提示,尤其是输入信息的时候
+2   异常点击时,较多bug
+3   views.py 存在重复代码,需优化
+4   页面整合不合理,应该是ajax和js使用方式不对

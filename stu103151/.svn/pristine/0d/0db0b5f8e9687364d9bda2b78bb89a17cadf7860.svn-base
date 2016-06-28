@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/css/cs.css">
+    <link rel="stylesheet" href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/flat-ui.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="icon" href="/static/img/ico.png" type="image/x-icon" />
+    <style>
+
+    </style>
+
+</head>
+<body class="gray-bg">
+    <div>
+        <div class="col-md-2" style="background-color: rgb(35,48,63);height: 682px" >
+            <div>
+                <a href="/store/"><img src="/static/img/h.png" class="img-rounded logo" >
+                </a>
+            </div>
+            <div class="menu">
+                <div class="item">
+                    <div class="title" onclick="Func_hide(this);">Store</div>
+                    <div class="menu_body ">
+                        <ul class="nav nav-pills">
+                           <li role="presentation"><a href="/store/books ">booklist</a></li>
+                          <li role="presentation"><a href="/store/authors" >authors</a></li>
+                          <li role="presentation"><a href="/store/publishers" >publishers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title" onclick="Func_hide(this);">Other</div>
+                    <div class="menu_body  hide">
+                        <ul class="nav nav-pills">
+                          <li role="presentation"><a href="#">booklist</a></li>
+                          <li role="presentation"><a href="#">authors</a></li>
+                          <li role="presentation"><a href="#">publishers</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title" onclick="Func_hide(this);">Other</div>
+                    <div class="menu_body hide">
+                        <ul class="nav nav-pills">
+                          <li role="presentation"><a href="/store/books ">booklist</a></li>
+                          <li role="presentation"><a href="/store/authors" >authors</a></li>
+                          <li role="presentation"><a href="/store/publishers" >publishers</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <div class="nav-top">
+{#                导航栏#}
+                <div style="float: right">
+                    {{ username }}
+                    <a href="/store/logout">logout</a>
+                </div>
+            </div>
+            <div id="con">
+
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div>
+
+            <p class="copyright"> <small><b>Copyright</b> rabbit.org Organization © 2013-2016</small> </p>
+        </div>
+        
+    </div>
+
+    <script src="/static/js/jquery-2.1.4.min.js"></script>
+
+    <script>
+        {% comment %}隐藏标签{% endcomment %}
+        function Func_hide(ths){
+            $(ths).next().removeClass('hide');
+            $(ths).parent().siblings().find('.menu_body').addClass('hide');
+        }
+
+
+           function AllBind(ths){
+            $("input[type='checkbox']").attr("checked",true);
+        }
+        function SelectAll(){
+//            checked 设置默认是否选中
+//            先找到所有table下的chekcbox,然后使用prop给checked设置ture 或者false
+            $('table :checkbox').prop('checked',true);
+        }
+        function OtherBind(ths){
+            $("input[type='checkbox']").each(function (){
+                    this.checked = !this.checked;
+                    })
+        }
+        function NoBind(ths){
+            $("input[type='checkbox']").removeAttr("checked");
+        }
+        function FuncRemove(ths){
+            $("#divHide").removeClass('hide');
+
+        }
+        function showdiv() {
+            document.getElementById("bg").style.display ="block";
+            document.getElementById("show").style.display ="block";
+        }
+        function hidediv() {
+            document.getElementById("bg").style.display ='none';
+            document.getElementById("show").style.display ='none';
+        }
+
+    </script>
+
+</body>
+</html>

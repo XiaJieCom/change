@@ -1,0 +1,57 @@
+{% extends 'store/basic.html' %}
+{% block content %}
+    <form action="/store/author_del/" method="post" xmlns="http://www.w3.org/1999/html">
+        <input class="button" id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+        <input class="button" id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+        <input class="button" id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+        <button class="button" id="checkbox4" type="button" value="Save" onclick="Save()">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        <button class="button" aria-hidden="true" id="add" type="button" value="Add" onclick="AddRow();">
+             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+        <button class="button" type="submit" value="del">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </button>
+        <table class="table" id="tb1">
+            <thead>
+                    <tr>
+
+
+                        <th>ID</th>
+                        <th>first_name</th>
+                        <th>last_name</th>
+                        <th>
+                            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in li %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.first_name }}</td>
+                            <td>{{ item.last_name }}</td>
+                            <td><input name="choice" type="checkbox"  value='{{ item.id }}'/></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+
+    </form>
+    <script>
+        function AddRow(){
+            var newRow = "<tbody><tr><td></td><td><input type='text'></td><td><input type='text'</td><td><input type='checkbox'/> </td></tr></tbody>')";
+            $("#tb1").append(newRow);
+        }
+        function Save(){
+            $.post(
+                    '/store/author_edit',{
+                        first_name:$
+                    }
+            )
+        }
+     　　
+    </script>
+
+{% endblock %}

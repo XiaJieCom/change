@@ -1,0 +1,149 @@
+{% extends 'crm/base_list.html' %}
+{% load customer_tag %}
+{% block list-head %}
+    客户列表
+{% endblock %}
+{% block list-form-del %}
+    <form action="/crm/customer_del/" method="post">
+{% endblock %}
+{% block list-form-table %}
+    <table class="table  table-hover table-striped	 ">
+        <thead>
+        <tr>
+            <th>选择</th>
+            <th>QQ</th>
+            <th>姓名</th>
+            <th>手机</th>
+            <th>渠道</th>
+            <th>咨询课程</th>
+            <th>课程类型</th>
+            <th>课程顾问</th>
+            <th>状态</th>
+            <th>日期</th>
+            <th>客户备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in customer_list %}
+            <tr>
+                <td><input name="choice" id="ck" type="checkbox"  value='{{ item.id }}' /></td>
+                <td><a href="{% url 'customer_detail' item.id  %}">{{ item.qq }}</a></td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.phone }}</td>
+                <td>{{ item.get_source_type_display }}</td>
+                <td>{{ item.course }}</td>
+                <td>{{ item.get_course_type_display }}</td>
+                <td>{{ item.consultant }}</td>
+                <td class="{{ item.status }}">{{ item.get_status_display }}</td>
+                <td>{{ item.date }}</td>
+                <td>{{ item.consult_memo|truncatechars:10 }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+</form>
+{% block list-form %}
+    <form action="" method="post" class="form-horizontal">
+        <div>
+            <div >
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    QQ:
+                </label>
+                <span>
+                    {{ model_form.qq }}
+                </span>
+            </div>
+
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    姓名:
+                </label>
+                <span>
+                    {{ model_form.name }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    手机:
+                </label>
+                <span>
+                    {{ model_form.phone }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    渠道:
+                </label>
+                <span>
+                    {{ model_form.source_type }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    咨询课程:
+                </label>
+                <span>
+                    {{ model_form.course_type }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    课程:
+                </label>
+                <span>
+                    {{ model_form.course }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    咨询顾问:
+                </label>
+                <span>
+                    {{ model_form.consultant }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    状态:
+                </label>
+                <span>
+                    {{ model_form.status }}
+                </span>
+            </div>
+            <div>
+                <label style="padding-right: 50px;padding-bottom: 10px;width: 150px">
+                    客户备注:
+                </label>
+                <span>
+                    {{ model_form.consult_memo }}
+                </span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </form>
+{% endblock %}
+{% block pagination %}
+    <ul class="pagination" >
+        {% if customer_list.has_previous %}
+            <li class="">
+                <a href="?page={{ customer_list.previous_page_number }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {% endif %}
+        {% for page_num in customer_list.paginator.page_range %}
+            {% guess_page customer_list.number page_num %}
+        {% endfor %}
+        {% if customer_list.has_next %}
+            <li class="">
+                <a href="?page={{ customer_list.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+{% endblock %}

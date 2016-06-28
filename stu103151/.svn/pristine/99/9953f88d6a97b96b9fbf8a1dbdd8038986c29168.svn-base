@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>book_form</title>
+</head>
+<body>
+    <form action="" method="post">{% csrf_token %}
+        {{ book_form }}
+        <select name="publisher_id">
+            {% for publisher in publishers %}
+                <option value="{{ publisher.id }}">{{ publisher.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="create">
+    </form>
+</body>
+</html>

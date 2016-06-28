@@ -1,0 +1,56 @@
+{% extends 'crm/lunch.html' %}
+{% load customer_tag %}
+{% block page-content-head %}
+    学习记录
+{% endblock %}
+{% block page-content %}
+    <div class="box-body">
+    <table class="table  table-hover table-striped	 ">
+        <thead>
+            <tr>
+                <th>学号</th>
+                <th>签到</th>
+                <th>成绩</th>
+                <th>日期</th>
+                <th>课程</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in studyrecord_list %}
+        <tr>
+            <td><a href="{% url 'studyrecord_detail' item.id  %}">{{ item.student }}</a></td>
+            <td class="{{ item.record }}">{{ item.get_record_display }}</td>
+            <td>{{ item.get_score_display }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ item.course_record }}</td>
+            <td>{{ item.note }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination">
+        <nav>
+            <ul class="pagination">
+                {% if studyrecord_list.has_previous %}
+                    <li class="">
+                        <a href="?page={{ studyrecord_list.previous_page_number }}" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% for page_num in studyrecord_list.paginator.page_range %}
+                    {% guess_page studyrecord_list.number page_num %}
+                {% endfor %}
+                {% if studyrecord_list.has_next %}
+                      <li class="">
+                        <a href="?page={{ studyrecord_list.next_page_number }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                {% endif %}
+          </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}

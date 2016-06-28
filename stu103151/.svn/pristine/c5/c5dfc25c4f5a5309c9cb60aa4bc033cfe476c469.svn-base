@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load custom %}
+{% block page-container %}
+
+    <div class="wrap-left">
+        <div class="article-title-bg">
+            {{ article_obj.title }}
+        </div>
+        <div class="article-title-brief">
+            <span>作者:{{ article_obj.author.name }}</span>
+            <span>{{ article_obj.pub_date }}</span>
+            <span>
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                {% filter_comment article_obj as comments %}
+                {{ comments.comment_count }}
+            </span>
+        </div>
+        <div class="article-content">
+            <img class="article-detail-head-img"  src="{{ article_obj.head_img }}">
+            {{ article_obj.content |safe}}
+        </div>
+
+        <div class="comment-box">
+        <hr/>
+        <a>发表评论</a>
+
+            {% if request.user.is_authenticated %}
+                 <textarea class="form-control" rows="3"></textarea>
+                 <button type="button" style="margin-top: 10px" class="btn btn-success pull-right">评论</button>
+
+            {% else %}
+                <div class="jumbotron">
+                  <h4 class="text-center"><a class="btn-link" href="{% url 'login' %}?next={{ request.path }}">登录</a>后评论</h4>
+
+                </div>
+            {% endif %}
+            <div class="comment-list">
+
+            </div>
+        </div>
+        <button type="button" onclick="GetComments()">测试评论</button>
+    </div>
+    <div class="wrap-right">
+    rithg
+    </div>
+    <div class="clear-both"></div>
+
+{% endblock %}
+
+
+{% block bottom-js %}
+<script>
+    function GetComments(){
+
+        $.get("{% url 'get_comments' article_obj.id %}",function(callback){
+
+            console.log(callback);
+            $(".comment-list").html(callback);
+        });//end get
+    }
+    function getCsrf(){
+        return $("input[name='csrfmiddlewaretoken']").val();
+    }
+    $(document).ready(function(){
+        $(".comment-box button").click(function(){
+            var comment_text = $(".comment-box textarea").val();
+            if (comment_text.trim().length <5){
+                alert("评论不能少于5个字sb");
+            }else{
+                //post
+
+                $.post("{% url 'post_comment' %}",
+                        {
+                            'comment_type':1,
+                            article_id:"{{ article_obj.id }}",
+                            parent_comment_id:null,
+                            'comment':comment_text.trim(),
+                            'csrfmiddlewaretoken':getCsrf()
+                        },//end post args
+                        function(callback){
+                            console.log(callback);
+                            if (callback == 'post-comment-success'){
+                                alert("post-comment-success");
+                            }
+                })//end post
+            }
+        });//end button click
+    });
+</script>
+{% endblock %}

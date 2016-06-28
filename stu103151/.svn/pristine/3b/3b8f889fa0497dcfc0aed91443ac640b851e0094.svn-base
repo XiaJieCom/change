@@ -1,0 +1,301 @@
+
+{% extends 'crm/basic.html' %}
+
+{% block content %}
+
+
+    <form action="/crm/Course_del/" method="post">
+        <div class="nav-divider">
+            <input class="button" id="checkbox1" type="button" value="全选" onclick="SelectAll(this);"/>
+            <input class="button" id="checkbox2" type="button" value="反选" onclick="OtherBind(this)"/>
+            <input class="button" id="checkbox3" type="button" value="取消" onclick="NoBind(this)"/>
+            <button class="button" type="submit" value="del" style="float: right">
+              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+            <button class="button" type="button"  data-toggle="modal" data-target="#myModal" style="float: right">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Button trigger modal -->
+
+
+
+        <table class="table table-hover table-striped table-condensed "  id="tb1" >
+            <thead>
+                     <tr>
+                        <th>选择</th>
+                        <th>ID</th>
+                        <th>QQ</th>
+                        <th>姓名</th>
+                        <th>电话</th>
+                        <th>学号</th>
+                        <th>来源</th>
+                        <th>备注</th>
+                        <th>状态</th>
+                        <th>时间</th>
+                        <th>咨询讲师</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in li %}
+                        <tr>
+                            <td><input name="choice" id="ck" type="checkbox"  value='{{ item.id }}' onclick="Edit(this)"/></td>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.qq }}</td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.phone }}</td>
+                            <td>{{ item.stu_id }}</td>
+                            <td>{{ item.source }}</td>
+                            <td>{{ item.class_type }}</td>
+                            <td>{{ item.status }}</td>
+                            <td>{{ item.date }}</td>
+                            <td>
+{#                                {{ item.consulant_id }}#}
+{#                                {{ consulant_list }}#}
+{#                                <option value="{{ item.consulant_id  }}">{{ consulant_list.name }}</option>#}
+{#                                <option value="{{ item.consulant_id  }}">{{ consulant_list.name }}</option>#}
+
+
+{#                                {{ consulant_list }}{{ item.consulant_id }}#}
+{#                                {% for li in consulant_list %}#}
+{#                                {{ consulant_list.item.consulant_id }}#}
+{#                                {% endfor %}#}
+                                {{ item.consulant_id  }}
+{#                                {{ consulant_list.item  }}#}
+
+{#                                {% endfor %}#}
+                            </td>
+                            <td>
+                                <button class="button" type="button"  data-toggle="modal" data-target="#EditModal" onclick="Edit(this)">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                </button>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                </tbody>
+         </table>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">添加记录</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="form-horizontal">
+                        <div>
+{#                            <div>#}
+{#                                <label style="padding-right: 50px;width: 150px">#}
+{#                                    ID:#}
+{#                                </label>#}
+{#                                <span>#}
+{#                                       {{ model_form.id }}#}
+{#                                </span>#}
+{#                            </div>#}
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    QQ:
+                                </label>
+                                <span>
+                                       {{ model_form.qq }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    姓名:
+                                </label>
+                                <span>
+                                       {{ model_form.name }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    电话:
+                                </label>
+                                <span>
+                                       {{ model_form.phone }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    学号:
+                                </label>
+                                <span >
+                                       {{ model_form.stu_id }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    来源:
+                                </label>
+                                <span >
+                                       {{ model_form.source }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;position: relative;bottom: 200px;">
+                                    备注:
+                                </label>
+                                <span >
+                                       {{ model_form.class_type }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    状态:
+                                </label>
+                                <span >
+                                       {{ model_form.status }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    咨询讲师:
+                                </label>
+                                <span >
+                                       {{ model_form.date }}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">submit</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- EditModal-->
+    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="height:auto;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">修改记录</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="/crm/Course_update/" method="post" class="form-horizontal">
+                        <div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    ID:
+                                </label>
+                                <span id="edit_ID">
+
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    QQ:
+                                </label>
+                                <span id="edit_qq">
+                                       {{ model_form.qq }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px">
+                                    姓名:
+                                </label>
+                                <span id="edit_name">
+                                       {{ model_form.name }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    电话:
+                                </label>
+                                <span id="edit_phone">
+                                       {{ model_form.phone }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    学号:
+                                </label>
+                                <span id="edit_stu_id">
+                                       {{ model_form.stu_id }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    来源:
+                                </label>
+                                <span id="edit_source">
+                                       {{ model_form.source }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;position: relative;bottom: 200px;">
+                                    备注:
+                                </label>
+                                <span id="edit_class_type">
+                                       {{ model_form.class_type }}
+                                </span>
+                            </div>
+                            <div>
+                                <label style="padding-right: 50px;width: 150px;">
+                                    状态:
+                                </label>
+                                <span id="edit_status">
+                                       {{ model_form.status }}
+                                </span>
+                            </div>
+{#                            <div>#}
+{#                                <label style="padding-right: 50px;width: 150px;">#}
+{#                                    日期:#}
+{#                                </label>#}
+{#                                <span id="edit_date">#}
+{#                                       {{ model_form.date }}#}
+{#                                </span>#}
+{#                            </div>#}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">submit</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script>
+         function Edit(ths){
+             var id = $(ths).parent().siblings('td:eq(1)').text();
+             console.log(id);
+             var qq = $(ths).parent().siblings('td:eq(2)').text();
+             console.log(qq);
+             var name = $(ths).parent().siblings('td:eq(3)').text();
+             console.log(name);
+             var phone = $(ths).parent().siblings('td:eq(4)').text();
+             console.log(phone);
+             var stu_id = $(ths).parent().siblings('td:eq(5)').text();
+             console.log(stu_id);
+             var source = $(ths).parent().siblings('td:eq(6)').text();
+             console.log(source);
+             var class_type = $(ths).parent().siblings('td:eq(7)').text();
+             console.log(class_type);
+             var status = $(ths).parent().siblings('td:eq(8)').text();
+             console.log(status);
+             var date = $(ths).parent().siblings('td:eq(9)').text();
+             console.log(date);
+
+             $("#edit_ID").text(id);
+             $("#edit_qq").children('input').val(qq);
+             $("#edit_name").children('input').val(name);
+             $("#edit_phone").children('input').val(phone);
+             $("#edit_stu_id").children('input').val(stu_id);
+             $("#edit_source").children('input').val(source);
+             $("#edit_class_type").children('textarea').val(class_type);
+             $("#edit_status").children('input').val(status);
+             $("#edit_date").children('input').val(date);
+
+        }
+
+    </script>
+{% endblock %}

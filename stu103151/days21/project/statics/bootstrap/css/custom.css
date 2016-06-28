@@ -1,0 +1,138 @@
+
+.page-container{
+    /*border: 1px dashed darkcyan;*/
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.wrap-left{
+    width: 75%;
+    float: left;
+}
+
+.wrap-right{
+    width: 25%;
+    float: left;
+    /*background-color: blueviolet;*/
+}
+
+.clear-both{
+    clear: both;
+}
+.footer{
+    margin-top: 50px;
+    height: 200px;
+    /*background-color: black;*/
+}
+.article-head-img img{
+    width: 220px;
+    height: 125px;
+
+}
+
+.article-box{
+    padding-bottom: 10px;
+}
+.article-brief{
+    margin-left: -15px;
+}
+.article-title{
+    font-size: 20px;
+
+}
+a{
+    color: #333;
+}
+a:visited{text-decoration: none}
+a:hover{
+    color: #337ab7;
+    text-decoration: none;
+}
+body{
+    color: #333;
+    font-family: Arial,"微软雅黑","Microsoft yahei","Hiragino Sans GB","冬青黑体简体中文 w3","Microsoft Yahei","Hiragino Sans GB","冬青黑体简体中文 w3",STXihei,"华文细黑",SimSun,"宋体",Heiti,"黑体",sans-serif;
+}
+
+.article-brief-text{
+    margin-top: 10px;
+    color: #999;
+}
+.article-title-bg{
+    font-size: 30px;
+}
+.article-title-brief{
+    margin-top: 10px;
+    color:#999;
+}
+
+.article-detail-head-img{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.article-content{
+    line-height: 30px;
+}
+
+.comment-node{
+    border: 1px solid darkcyan;
+    padding: 5px;
+}
+.root-comment{
+    border: 1px solid brown;
+    padding: 5px;
+}
+/*for webchat */
+
+.chat-container{
+    width:100%;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.left-contact-panel{
+    width: 200px;
+    height: 605px;
+    border: 1px solid black;
+    float: left;
+
+}
+.left-contact-panel .list-group li{
+    border: 1px
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: black;
+    background-color: rgb(220,220,220);
+    border-color: black;
+}
+
+
+.right-chat-panel{
+    width: 726px;
+    height: 100%;
+    border: 2px solid greenyellow;
+    float: right;
+}
+
+.chat-box-title{
+    height: 40px;
+    border: 1px solid darkslategray;
+}
+.chat-box-window{
+    height: 300px;
+    border: 1px solid black;
+    overflow: auto;/*给div 做内容多了就自动加滚动条*/
+}
+.chat-box-emoj{
+    height: 30px;
+    border: 1px solid brown;
+}
+.chat-box-msg-box {
+    height: 230px;
+    border: 1px solid deeppink;
+}
+.chat-box-msg-box textarea{
+    height: 100%;
+    width: 100%;
+}
