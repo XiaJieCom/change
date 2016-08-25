@@ -1,4 +1,4 @@
-﻿				openvpn 安装笔记
+				openvpn 安装笔记
 				
 项目需求：解决国内无法访问facebook问题
 
@@ -291,6 +291,8 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 添加转发
 iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s 172.16..0/24 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s 172.16.0.0/24 -o eth1 -j MASQUERADE
 
 查看转发规则
 iptables -t nat -nL
